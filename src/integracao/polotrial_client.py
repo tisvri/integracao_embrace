@@ -8,6 +8,10 @@ import requests
 logger= logging.getLogger(__name__)
 
 class PoloTrialClient:
+    """
+    Client for interaction with Polotrial API.
+    
+    """
     
     
     def __init__(
@@ -34,10 +38,10 @@ class PoloTrialClient:
         self._authed = False
     
     def _login(self) -> None:
-        """_summary_
+        """Authenticate with the Polotrial API.
 
         Raises:
-            RuntimeError: _description_
+            RuntimeError: If authentication fails.
         """
         
         session_url = urljoin(self.base_url, "sessions")
@@ -66,6 +70,19 @@ class PoloTrialClient:
         params = None, 
         json = None
     ) -> requests.Response:
+        """Make an HTTP request to the Polotrial API.
+
+        Args:
+            method (str): HTTP request method (POST, GET or PUT)
+            path (str): API endpoint path (e.g., "/voluntarios")
+            params (dict, optional): Query parameters for the request. Defaults to None.
+            json (dict, optional): JSON payload for the request. Defaults to None.
+
+        Returns:
+            requests.Response: The response object from the Polotrial API.
+        Raises:
+            RuntimeError: If the request fails after retrying authentication.
+        """
         
         if not self._authed:
             self._login()
@@ -93,13 +110,13 @@ class PoloTrialClient:
         Search in Polotrial /voluntario endpoint for a volunteer in name field.
 
         Args:
-            name (str): _description_
+            name (str): The name of the volunteer to search for.
 
         Raises:
-            RuntimeError: _description_
+            RuntimeError: If the request to the Polotrial API fails.
 
         Returns:
-            Optional[Dict[str, Any]]: _description_
+            Optional[Dict[str, Any]]: The volunteer data if found, otherwise None.
         """
         volunteer_request = self._requests(
             "GET",
@@ -115,7 +132,18 @@ class PoloTrialClient:
         self, 
         payload: Dict[str, Any]
     ) -> Dict[str, Any]:
-        
+        """
+        Create a new volunteer in the Polotrial system.
+
+        Args:
+            payload (Dict[str, Any]): The volunteer data to create.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The created volunteer data.
+        """
         volunteer_request = self._requests(
             "POST",
             "/voluntarios",
@@ -142,7 +170,18 @@ class PoloTrialClient:
         co_centro: str,
         apelido_protocolo: str
     ) -> Optional[Dict[str, Any]]:
-        
+        """Get a protocol from the Polotrial system.
+
+        Args:
+            co_centro (str): The center code of the protocol.
+            apelido_protocolo (str): The protocol nickname.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Optional[Dict[str, Any]]: The protocol data if found, otherwise None.
+        """
         protocol_request = self._requests(
             "GET",
             "/protocolo",
@@ -160,7 +199,17 @@ class PoloTrialClient:
         self,
         co_protocolo: int
     ) -> list[Dict[str, Any]]:
-        
+        """List the arms of a protocol.
+
+        Args:
+            co_protocolo (int): The protocol code.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            list[Dict[str, Any]]: The list of arms for the protocol.
+        """
         arm_request = self._requests(
             "GET",
             "/braco",
@@ -182,7 +231,18 @@ class PoloTrialClient:
         co_voluntario: int,
         co_protocolo: int
     ) -> Optional[Dict[str, Any]]:
-        
+        """Find a participant in a protocol.
+
+        Args:
+            co_voluntario (int): The volunteer code.
+            co_protocolo (int): The protocol code.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Optional[Dict[str, Any]]: The participant data if found, otherwise None.
+        """
         participant_request = self._requests(
             "GET",
             "/participantes",
@@ -200,7 +260,17 @@ class PoloTrialClient:
         self,
         participant_id: int
     ) -> Dict[str, Any]:
-        
+        """Get a participant by ID.
+
+        Args:
+            participant_id (int): The participant ID.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The participant data.
+        """
         participant_request = self._requests(
             "GET",
             f"/participantes/{participant_id}"
@@ -213,7 +283,17 @@ class PoloTrialClient:
         self,
         payload: Dict[str, Any]
     ) -> Dict[str, Any]:
-        
+        """Create a new participant.
+
+        Args:
+            payload (Dict[str, Any]): The participant data to create.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The created participant data.
+        """
         participant_request = self._requests(
             "POST",
             "/participantes",
@@ -245,7 +325,17 @@ class PoloTrialClient:
         *,
         co_participante: int
     ) -> list[Dict[str, Any]]:
-        
+        """List visits for a participant.
+
+        Args:
+            co_participante (int): The participant code.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            list[Dict[str, Any]]: The list of participant visits.
+        """
         visit_request = self._requests(
             "GET",
             "/participante_visita",
@@ -262,8 +352,18 @@ class PoloTrialClient:
     def get_participant_visit(
         self,
         participante_visita_id: int
-    ) -> Dict[str,Any]:
-        
+    ) -> Dict[str, Any]:
+        """Get a participant visit by ID.
+
+        Args:
+            participante_visita_id (int): The participant visit ID.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The participant visit data.
+        """
         visit_request = self._requests(
             "GET",
             f"/participante_visita/{participante_visita_id}"
@@ -277,7 +377,17 @@ class PoloTrialClient:
         self, *,
         co_participante_visita: int
     ) -> list[Dict[str, Any]]:
-        
+        """List procedures for a participant visit.
+
+        Args:
+            co_participante_visita (int): The participant visit code.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            list[Dict[str, Any]]: The list of participant visit procedures.
+        """
         procedures_request = self._requests(
             "GET",
             "/participante_visita_procedimento",
@@ -296,7 +406,17 @@ class PoloTrialClient:
         self, *,
         co_protocolo: int
     ) -> list[Dict[str, Any]]:
-        
+        """List procedures for a protocol.
+
+        Args:
+            co_protocolo (int): The protocol code.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            list[Dict[str, Any]]: The list of protocol procedures.
+        """
         procedures_request = self._requests(
             "GET",
             "/protocolo_procedimento",
@@ -315,7 +435,18 @@ class PoloTrialClient:
         procedure_id: int,
         payload: Dict[str, Any]
     ) -> Dict[str, Any]:
-        
+        """Update a participant visit procedure.
+
+        Args:
+            procedure_id (int): The procedure ID.
+            payload (Dict[str, Any]): The data to update the procedure with.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The updated participant visit procedure.
+        """
         procedure_request = self._requests(
             "PUT",
             f"/participante_visita_procedimento/{procedure_id}",
@@ -330,7 +461,17 @@ class PoloTrialClient:
         self,
         payload: Dict[str, Any]
     ) -> Dict[str, Any]:
-        
+        """Create a participant visit procedure.
+
+        Args:
+            payload (Dict[str, Any]): The data for the new participant visit procedure.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The created participant visit procedure.
+        """
         procedure_request = self._requests(
             "POST",
             "/participante_visita_procedimento",
@@ -345,7 +486,17 @@ class PoloTrialClient:
         self,
         ds_nome: str
     ) -> Optional[Dict[str, Any]]:
-        
+        """Find a person by name.
+
+        Args:
+            ds_nome (str): The name of the person.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Optional[Dict[str, Any]]: The person data if found, else None.
+        """
         person_request = self._requests(
             "GET",
             "/pessoas",
@@ -363,7 +514,17 @@ class PoloTrialClient:
         self, 
         payload: Dict[str, Any]
     ) -> Dict[str, Any]:
-        
+        """Create a procedure executor.
+
+        Args:
+            payload (Dict[str, Any]): The data for the new procedure executor.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The created procedure executor.
+        """
         executor_request = self._requests(
             "POST",
             "/participante_visita_procedimento_executor",
@@ -377,7 +538,17 @@ class PoloTrialClient:
         self,
         co_participante_visita_procedimento: int
     ) -> list[Dict[str, Any]]:
-        
+        """List procedure executors for a participant visit procedure.
+
+        Args:
+            co_participante_visita_procedimento (int): The participant visit procedure code.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            list[Dict[str, Any]]: The list of procedure executors.
+        """
         executor_request = self._requests(
             "GET",
             "/participante_visita_procedimento_executor",
@@ -387,7 +558,7 @@ class PoloTrialClient:
         )
         if executor_request.status_code != 200:
             raise RuntimeError(f"Error listing procedure executors: {executor_request.status_code} - {executor_request.text}")
-        data = executor_requests.json()
+        data = executor_request.json()
         return data if isinstance(data, list) else []
     
     def update_participant(
@@ -395,7 +566,18 @@ class PoloTrialClient:
         participant_id: int,
         payload: Dict[str, Any]
     ) -> Dict[str, Any]:
-        
+        """Update a participant.
+
+        Args:
+            participant_id (int): The ID of the participant to update.
+            payload (Dict[str, Any]): The data to update the participant with.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The updated participant.
+        """
         update_participant_request = self._requests(
             "PUT",
             f"/participantes/{participant_id}",
@@ -409,8 +591,18 @@ class PoloTrialClient:
         self,
         payload: Dict[str, Any]
     ) -> Dict[str, Any]:
-        
-        if not payload.get("data_estimada") and payload("data_realizada"):
+        """Create a participant visit.
+
+        Args:
+            payload (Dict[str, Any]): The data for the new participant visit.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The created participant visit.
+        """
+        if not payload.get("data_estimada") and payload.get("data_realizada"):
             payload = {
                 **payload,
                 "data_estimada": payload["data_realizada"],
@@ -434,8 +626,8 @@ class PoloTrialClient:
         if request.status_code in (200, 201):
             return request.json()
         
-        if request.satus_code == 500:
-            logger.warning("Polotrial returned 500 error when creating visit. Cheking if it was created anyway...")
+        if request.status_code == 500:
+            logger.warning("Polotrial returned 500 error when creating visit. Checking if it was created anyway...")
             
             co_participante = payload.get("co_participante")
             nome_tarefa = payload.get("nome_tarefa")
@@ -448,7 +640,7 @@ class PoloTrialClient:
                 matching_visits = [v for v in visits if v.get("nome_tarefa") == nome_tarefa]
                 if matching_visits:
                     latest_visit = max(matching_visits, key=lambda v: v.get("id", 0))
-                    logger.info("Visit was created despite 500 erro: %s", latest_visit["id"])
+                    logger.info("Visit was created despite 500 error: %s", latest_visit["id"])
                     return latest_visit
         
         raise RuntimeError(f"Error creating participant visit: {request.status_code} - {request.text}")
@@ -458,7 +650,18 @@ class PoloTrialClient:
         participante_visita_id: int,
         payload: Dict[str, Any]
     ) -> Dict[str, Any]:
-        
+        """Update a participant visit.
+
+        Args:
+            participante_visita_id (int): The ID of the participant visit to update.
+            payload (Dict[str, Any]): The data to update the participant visit with.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The updated participant visit.
+        """
         request = self._requests(
             "PUT",
             f"/participante_visita/{participante_visita_id}",
