@@ -3,15 +3,15 @@ from __future__ import annotations
 import logging
 import os
 
-from integracao.events.unique_visit import sync_unique_visit
-from integracao.events.status_update import PARTICIPANT_STATUS_EVENT, sync_participant_status_update
-from integracao.visits_catalog import VISITS_CATALOG
-from integracao.polotrial_client import PoloTrialClient
+from integracao_embrace.events.unique_visit import sync_unique_visit
+from integracao_embrace.events.status_update import PARTICIPANT_STATUS_EVENT, sync_participant_status_update
+from integracao_embrace.visits_catalog import VISITS_CATALOG
+from integracao_embrace.polotrial_client import PoloTrialClient
 from redcap_client import RedcapClient
 
 import os
 import dotenv
-from integracao.config import config
+from integracao_embrace.config import config
 
 dotenv.load_dotenv(override=True)
 UNIQUE_EVENT = config.UNIQUE_EVENT_NAME

@@ -1,7 +1,7 @@
 [project]
 name = "integracao-embrace"
 version = "0.1.0"
-description = "Add your description here"
+description = "Webhook-driven integration service to synchronize REDCap eCRF data entries with the PoloTrial clinical study management platform in real time." 
 readme = "README.md"
 authors = [
     { name = "Eduardo Augusto Rabelo Socca", email = "eduardo_socca@yahoo.com.br" }
@@ -9,6 +9,7 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.141.1",
+    "ipykernel>=7.3.0",
     "pandas>=3.0.5",
     "pycap>=2.7.0",
     "python-dotenv>=1.2.3",

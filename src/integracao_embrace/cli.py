@@ -3,11 +3,11 @@ from __future__ import annotations
 import argparse
 from dotenv import load_dotenv
 
-from integracao.config  import Settings
-from integracao.dispatch import dispatch_event
-from integracao.logging_conf import setup_logging
-from integracao.polotrial_client import PoloTrialClient
-from integracao.redcap_client import RedcapClient
+from integracao_embrace.config  import Settings
+from integracao_embrace.dispatch import dispatch_event
+from integracao_embrace.logging_conf import setup_logging
+from integracao_embrace.polotrial_client import PoloTrialClient
+from integracao_embrace.redcap_client import RedcapClient
 
 
 def main() -> None:
@@ -30,7 +30,7 @@ def main() -> None:
         record_id = args.record_id,
         event_name = args.event,
         redcap=redcap,
-        polotrial=polotrial
+        polotrial=polotrial,
         protocol_nickname=settings.protocol_nickname
     )
     
