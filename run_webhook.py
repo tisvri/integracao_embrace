@@ -4,7 +4,7 @@ import uvicorn
 
 def main():
     """
-    Run the REDCap EDT webhook using Uvicorn.     
+        Run the REDCap EDT webhook using Uvicorn.     
     """
     parser = argparse.ArgumentParser(
         description="Run REDCap EDT webhook"
@@ -36,4 +36,7 @@ def main():
 
 
 if __name__ == "__main__":
+    """
+        Run the REDCap EDT webhook using Uvicorn.
+    """
     main()

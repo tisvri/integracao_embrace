@@ -15,7 +15,7 @@ from integracao_embrace.config import config
 
 dotenv.load_dotenv(override=True)
 UNIQUE_EVENT = config.UNIQUE_EVENT_NAME
-PARTICIPANT_STAUS_EVENT = config.PARTICIPANT_STATUS_EVENT_NAME
+PARTICIPANT_STATUS_EVENT = config.PARTICIPANT_STATUS_EVENT_NAME
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +29,17 @@ def dispatch_event(
     protocol_nickname: str,
     repeat_instance: str | None=None,
 ) -> None:
+    """
+            Dispatch events to the appropriate handlers.
     
+            Args:
+                record_id (str): The record ID.
+                event_name (str): The name of the event.
+                redcap (RedcapClient): The REDCap client instance.
+                polotrial (PoloTrialClient): The PoloTrial client instance.
+                protocol_nickname (str): The protocol nickname.
+                repeat_instance (str | None, optional): The repeat instance. Defaults to None.
+        """
     logger.info(
         "Dispatch runtime: pid=%s, module=%s, event_name=%r ",
         os.getpid(),
