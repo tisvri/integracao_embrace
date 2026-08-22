@@ -355,16 +355,19 @@ def sync_executor(
     Returns:
         None
     """
-    
+    #1. Extract executor name and date from REDCap payload
     executor_name = str(redcap_payload.get(executor_field, "")).strip()
     if not executor_name:
         logger.warning("%s: Executor name is missing for procedure pattern %s", visit_label, procedure_pattern)
         return
     
+    #2. Extract the date the procedure was performed from REDCap payload
     data_realizada = str(redcap_payload.get(executor_date_field, "")).strip()
     if not data_realizada:
         logger.warning("%s: Executor date is missing for procedure pattern %s", visit_label, procedure_pattern)
         return
+    
+    #3. Find the procedure in the merged DataFrame that matches the given pattern
     proc = merged_procedures_df[
         merged_procedures_df["nome_procedimento_estudo"].astype(str).str.contains(procedure_pattern, regex=True, na=False, flags=re.IGNORECASE)
     ]
@@ -373,11 +376,13 @@ def sync_executor(
         logger.warning("%s: No procedure found for pattern %s to sync executor", visit_label, procedure_pattern)
         return
     
+    #4. Get the procedure ID and log a warning if multiple procedures match the pattern
     procedure_id = int(proc['id'].iloc[0])
     if len(proc) > 1:
         logger.warning("%s: Multiple procedures found for pattern %s, using first: %s", visit_label, procedure_pattern, proc.iloc[0]['nome_procedimento_estudo'])
     executor_id = int(polotrial.get_person_by_name(executor_name)['id'])  # Assuming polotrial has a method to get person by name
     
+    #5. Check if the executor is already linked to the procedure
     existeing_links = polotrial.list_procedure_executors(procedure_id)
     already_linked = any(int(x.get("executor", -1)) == executor_id for x in existeing_links)
     if already_linked:
