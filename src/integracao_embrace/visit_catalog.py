@@ -13,7 +13,7 @@ POLOTRIAL_UNIQUE_EVENT = config.POLOTRIAL_UNIQUE_EVENT_NAME
 
 # Importing procedure mapping from sync_engine to avoid circular dependency
 from integracao_embrace.mappings.procedures_maps import (
-    UNIQUE_EVENT_PROCEDURES_MAP
+    POLOTRIAL_UNIQUE_EVENT_PROCEDURES_MAP
 )
 
 class VisitConfig:
@@ -38,7 +38,7 @@ class VisitConfig:
                 redcap_event_name = UNIQUE_EVENT,
                 polotrial_visit_name = POLOTRIAL_UNIQUE_EVENT,
                 date_field = "idp4",
-                procedures_map = UNIQUE_EVENT_PROCEDURES_MAP,
+                procedures_map = POLOTRIAL_UNIQUE_EVENT_PROCEDURES_MAP,
                 executor_config = {
                     'field': 'cm_evolucao_executor',
                     'date_field': 'cm_atendimento_dt',

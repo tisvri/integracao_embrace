@@ -1,6 +1,6 @@
 from typing import List, Dict, Optional
 
-UNIQUE_EVENT_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
+POLOTRIAL_UNIQUE_EVENT_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     #1
     {
         "procedure_name": r"M[oóOÓ]dulo\s+Identifica[cçCÇ][aãAÃ]o\s+da\s+Paciente",

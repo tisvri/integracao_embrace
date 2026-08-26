@@ -1,0 +1,20 @@
+STATUS_CODE_MAPPING  = {
+    "1"	: "11",
+    "Ativo": "11",
+    "2"	: "308",
+    "Concluído": "308",
+    "3"	: "309",
+    "Descontinuado" : "309",
+    "4"	: "540",
+    "Triagem" : "540",
+    "5"	: "310",
+    "Falha de seleção" : "310",
+    "6"	: "710",
+    "Retirada de TCLE" : "710",
+    "7"	: "9289",
+    "Falha de Pré Triagem" : "9289",
+    "8"	: "709",
+    "Morte" : "709",
+    "9"	: "749",
+    "Perda de seguimento" : "749"
+}
