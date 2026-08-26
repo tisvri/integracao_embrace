@@ -5,7 +5,7 @@ import os
 
 from integracao_embrace.events.unique_visit import sync_unique_visit
 from integracao_embrace.events.status_update import PARTICIPANT_STATUS_EVENT, sync_participant_status_update
-from integracao_embrace.visits_catalog import VISITS_CATALOG
+from integracao_embrace.visit_catalog import VISIT_CATALOG
 from integracao_embrace.polotrial_client import PoloTrialClient
 from redcap_client import RedcapClient
 
@@ -14,8 +14,8 @@ import dotenv
 from integracao_embrace.config import config
 
 dotenv.load_dotenv(override=True)
-UNIQUE_EVENT = config.UNIQUE_EVENT_NAME
-PARTICIPANT_STATUS_EVENT = config.PARTICIPANT_STATUS_EVENT_NAME
+REDCAP_UNIQUE_EVENT = config.REDCAP_UNIQUE_VISIT_NAME
+PARTICIPANT_STATUS_EVENT = config.PARTICIPANT_STATUS
 
 logger = logging.getLogger(__name__)
 
@@ -49,7 +49,7 @@ def dispatch_event(
     )
     event_name=event_name.strip()
     
-    if event_name == UNIQUE_EVENT:
+    if event_name == REDCAP_UNIQUE_EVENT:
         logger.info( "Dispatching to unique visit handles: %s", event_name)
         sync_unique_visit(
             record_id=record_id,
