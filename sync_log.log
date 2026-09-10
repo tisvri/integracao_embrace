@@ -1,0 +1,920 @@
+2026-09-09 17:55:56,600 - INFO - Webhook initialized for protocol Embrace
+2026-09-09 18:01:30,983 - INFO - Webhook initialized for protocol Embrace
+2026-09-09 18:01:30,985 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-09 18:04:35,295 - INFO - Received webhook from REDCap DET: project_id=66, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.2/index.php?pid=66
+2026-09-09 18:04:35,506 - INFO - Dispatch runtime: pid=30340, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-09 18:04:35,507 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-09 18:04:36,411 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-09 18:04:36,414 - INFO - Debug redcaptoken (First 3 chars): 8C2...
+2026-09-09 18:04:36,417 - INFO - Debug redcap status: 403
+2026-09-09 18:04:36,418 - INFO - Debug redcap response (first 30 chars): {"error":"You do not have perm
+2026-09-09 18:04:36,421 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=403 Client Error: Forbidden for url: https://svriglobal.org/redcap/api/
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 60, in sync_unique_event
+    redcap_payload = redcap.export_record_eav(
+        record_id,
+        event_name
+    )
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/redcap_client.py", line 96, in export_record_eav
+    redcap_request.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/.venv/lib/python3.13/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://svriglobal.org/redcap/api/
+2026-09-10 14:48:48,055 - INFO - Webhook initialized for protocol Embrace
+2026-09-10 15:15:49,227 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 15:15:49,538 - INFO - Dispatch runtime: pid=915, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 15:15:49,541 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 15:15:50,934 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 15:15:50,980 - INFO - Debug redcaptoken (First 3 chars): 8C2...
+2026-09-10 15:15:50,993 - INFO - Debug redcap status: 403
+2026-09-10 15:15:51,002 - INFO - Debug redcap response (first 30 chars): {"error":"You do not have perm
+2026-09-10 15:15:51,007 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=403 Client Error: Forbidden for url: https://svriglobal.org/redcap/api/
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 60, in sync_unique_event
+    redcap_payload = redcap.export_record_eav(
+        record_id,
+        event_name
+    )
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/redcap_client.py", line 96, in export_record_eav
+    redcap_request.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/.venv/lib/python3.13/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://svriglobal.org/redcap/api/
+2026-09-10 15:22:15,733 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 15:22:15,738 - INFO - Dispatch runtime: pid=915, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 15:22:15,739 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 15:22:16,403 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 15:22:16,404 - INFO - Debug redcaptoken (First 3 chars): 8C2...
+2026-09-10 15:22:16,404 - INFO - Debug redcap status: 403
+2026-09-10 15:22:16,405 - INFO - Debug redcap response (first 30 chars): {"error":"You do not have perm
+2026-09-10 15:22:16,406 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=403 Client Error: Forbidden for url: https://svriglobal.org/redcap/api/
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 60, in sync_unique_event
+    redcap_payload = redcap.export_record_eav(
+        record_id,
+        event_name
+    )
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/redcap_client.py", line 96, in export_record_eav
+    redcap_request.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/.venv/lib/python3.13/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://svriglobal.org/redcap/api/
+2026-09-10 15:39:07,202 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-10 15:39:45,245 - INFO - Webhook initialized for protocol Embrace
+2026-09-10 15:40:23,531 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 15:40:23,791 - INFO - Dispatch runtime: pid=7843, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 15:40:23,792 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 15:40:24,930 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 15:40:25,002 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 15:40:25,053 - INFO - Debug redcap status: 200
+2026-09-10 15:40:25,094 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 15:40:25,125 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 15:40:25,145 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 9 fields from 9 entries
+2026-09-10 15:40:25,172 - INFO - Mapped gender:  ➡ None
+2026-09-10 15:40:25,206 - INFO - Mapped site:  ➡ None
+2026-09-10 15:40:25,235 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': '', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': None, 'contatos': '11111111111'}
+2026-09-10 15:40:25,266 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=Site code mapping not found for CENTRO value: 'SVRI Clínica Morumbi'. Please check SITE_CODE_MAPPING keys.
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 121, in sync_unique_event
+    raise RuntimeError(f"Site code mapping not found for CENTRO value: {raw_centro!r}. Please check SITE_CODE_MAPPING keys.")
+RuntimeError: Site code mapping not found for CENTRO value: 'SVRI Clínica Morumbi'. Please check SITE_CODE_MAPPING keys.
+2026-09-10 15:42:08,582 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-10 15:44:32,953 - INFO - Webhook initialized for protocol Embrace
+2026-09-10 15:44:37,422 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 15:44:37,505 - INFO - Dispatch runtime: pid=8416, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 15:44:37,506 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 15:44:38,188 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 15:44:38,189 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 15:44:38,189 - INFO - Debug redcap status: 200
+2026-09-10 15:44:38,192 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 15:44:38,194 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 15:44:38,194 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 9 fields from 9 entries
+2026-09-10 15:44:38,195 - INFO - Mapped gender:  ➡ None
+2026-09-10 15:44:38,195 - INFO - Mapped site:  ➡ None
+2026-09-10 15:44:38,196 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': '', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': None, 'contatos': '11111111111'}
+2026-09-10 15:44:38,197 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=Site code mapping not found for CENTRO value: 'SVRI Clínica Morumbi'. Please check SITE_CODE_MAPPING keys.
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 121, in sync_unique_event
+    raise RuntimeError(f"Site code mapping not found for CENTRO value: {raw_centro!r}. Please check SITE_CODE_MAPPING keys.")
+RuntimeError: Site code mapping not found for CENTRO value: 'SVRI Clínica Morumbi'. Please check SITE_CODE_MAPPING keys.
+2026-09-10 15:54:27,193 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 15:54:27,199 - INFO - Dispatch runtime: pid=8416, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 15:54:27,200 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 15:54:27,909 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 15:54:27,910 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 15:54:27,911 - INFO - Debug redcap status: 200
+2026-09-10 15:54:27,912 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 15:54:27,913 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 15:54:27,914 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 15:54:27,916 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 15:54:27,916 - INFO - Mapped site:  ➡ None
+2026-09-10 15:54:27,917 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': None, 'contatos': '11111111111'}
+2026-09-10 15:54:27,918 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=Site code mapping not found for CENTRO value: 'SVRI Clínica Morumbi'. Please check SITE_CODE_MAPPING keys.
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 121, in sync_unique_event
+    raise RuntimeError(f"Site code mapping not found for CENTRO value: {raw_centro!r}. Please check SITE_CODE_MAPPING keys.")
+RuntimeError: Site code mapping not found for CENTRO value: 'SVRI Clínica Morumbi'. Please check SITE_CODE_MAPPING keys.
+2026-09-10 15:59:42,482 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-10 16:00:03,321 - INFO - Webhook initialized for protocol Embrace
+2026-09-10 16:00:40,691 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 16:00:40,743 - INFO - Dispatch runtime: pid=9780, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 16:00:40,743 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 16:00:41,441 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 16:00:41,442 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 16:00:41,443 - INFO - Debug redcap status: 200
+2026-09-10 16:00:41,443 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 16:00:41,444 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 16:00:41,445 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 16:00:41,446 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 16:00:41,447 - INFO - Mapped site:  ➡ None
+2026-09-10 16:00:41,451 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': None, 'contatos': '11111111111'}
+2026-09-10 16:00:41,452 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=Site code mapping not found for CENTRO value: 'SVRI Clínica Morumbi'. Please check SITE_CODE_MAPPING keys.
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 123, in sync_unique_event
+    raise RuntimeError(f"Site code mapping not found for CENTRO value: {raw_centro!r}. Please check SITE_CODE_MAPPING keys.")
+RuntimeError: Site code mapping not found for CENTRO value: 'SVRI Clínica Morumbi'. Please check SITE_CODE_MAPPING keys.
+2026-09-10 16:05:40,133 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 16:05:40,136 - INFO - Dispatch runtime: pid=9780, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 16:05:40,137 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 16:05:40,834 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 16:05:40,835 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 16:05:40,835 - INFO - Debug redcap status: 200
+2026-09-10 16:05:40,836 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 16:05:40,837 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 16:05:40,837 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 16:05:40,838 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 16:05:40,839 - INFO - Mapped site:  ➡ None
+2026-09-10 16:05:40,839 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': None, 'contatos': '11111111111'}
+2026-09-10 16:05:40,840 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=Site code mapping not found for CENTRO value: 'SVRI Clínica Morumbi'. Please check SITE_CODE_MAPPING keys.
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 123, in sync_unique_event
+    #4. Check if the volunteer already exists in PoloTrial
+RuntimeError: Site code mapping not found for CENTRO value: 'SVRI Clínica Morumbi'. Please check SITE_CODE_MAPPING keys.
+2026-09-10 16:05:47,336 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-10 16:06:10,166 - INFO - Webhook initialized for protocol Embrace
+2026-09-10 16:06:21,999 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 16:06:22,057 - INFO - Dispatch runtime: pid=10278, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 16:06:22,058 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 16:06:22,721 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 16:06:22,722 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 16:06:22,723 - INFO - Debug redcap status: 200
+2026-09-10 16:06:22,727 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 16:06:22,728 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 16:06:22,729 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 16:06:22,730 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 16:06:22,733 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-10 16:06:22,734 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': '47', 'contatos': '11111111111'}
+2026-09-10 16:06:23,565 - INFO - Polotrial: authentication succsssful
+2026-09-10 16:06:25,269 - INFO - Volunteer 1 created in PoloTrial with ID: 3338
+2026-09-10 16:06:25,269 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-10 16:06:25,680 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-10 16:06:25,907 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=module 'integracao_embrace.config.config' has no attribute 'UNIQUE_ARM_NAME'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 146, in sync_unique_event
+    unique_arm_name = config.UNIQUE_ARM_NAME.strip()
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'integracao_embrace.config.config' has no attribute 'UNIQUE_ARM_NAME'
+2026-09-10 16:12:00,848 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 16:12:00,856 - INFO - Dispatch runtime: pid=10278, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 16:12:00,857 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 16:12:01,567 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 16:12:01,568 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 16:12:01,570 - INFO - Debug redcap status: 200
+2026-09-10 16:12:01,571 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 16:12:01,572 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 16:12:01,573 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 16:12:01,574 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 16:12:01,574 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-10 16:12:01,575 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': '47', 'contatos': '11111111111'}
+2026-09-10 16:12:01,798 - INFO - Volunteer 1 already exists in PoloTrial with ID: 3338
+2026-09-10 16:12:01,800 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-10 16:12:02,251 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-10 16:12:02,484 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=module 'integracao_embrace.config.config' has no attribute 'UNIQUE_ARM_NAME'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 146, in sync_unique_event
+    unique_arm_name = config.POLOTRIAL_ARM_NAME.strip()
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'integracao_embrace.config.config' has no attribute 'UNIQUE_ARM_NAME'
+2026-09-10 16:12:08,039 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-10 16:12:42,256 - INFO - Webhook initialized for protocol Embrace
+2026-09-10 16:13:24,375 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 16:13:24,479 - INFO - Dispatch runtime: pid=10791, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 16:13:24,480 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 16:13:25,197 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 16:13:25,198 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 16:13:25,200 - INFO - Debug redcap status: 200
+2026-09-10 16:13:25,201 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 16:13:25,202 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 16:13:25,203 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 16:13:25,204 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 16:13:25,205 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-10 16:13:25,208 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': '47', 'contatos': '11111111111'}
+2026-09-10 16:13:25,993 - INFO - Polotrial: authentication succsssful
+2026-09-10 16:13:26,182 - INFO - Volunteer 1 already exists in PoloTrial with ID: 3338
+2026-09-10 16:13:26,183 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-10 16:13:26,612 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-10 16:13:26,818 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-10 16:13:26,819 - INFO - Arm matched: Embrace with ID: 283
+2026-09-10 16:13:27,492 - INFO - DEBUG: Sending participant payload to PoloTrial: 
+{
+  "co_voluntario": 3338,
+  "co_protocolo": 2381,
+  "data_inclusao": "2026-09-10",
+  "id_participante": "1",
+  "numero_de_screening": "1",
+  "status_participante": "540",
+  "co_braco": 283,
+  "atualizar_agenda": "1",
+  "apagar_visitas_pendentes": "0"
+}
+2026-09-10 16:13:39,496 - INFO - DEBUG: Participant created in PoloTrial: 
+{
+  "id": 3313,
+  "apagar_visitas_pendentes": 0,
+  "id_participante": "1",
+  "numero_de_screening": "1",
+  "co_protocolo": 2381,
+  "atualizar_agenda": 1,
+  "co_braco": 283,
+  "data_inclusao": "2026-09-10T00:00:00.000Z",
+  "status_participante": 540,
+  "co_voluntario": "3338",
+  "user_id_log": 4593
+}
+2026-09-10 16:13:39,496 - INFO - Participant created in PoloTrial with ID: 3313
+2026-09-10 16:14:01,075 - INFO - Participant visits retrieved: 1, for participant ID: 3313
+2026-09-10 16:14:01,080 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=module 'integracao_embrace.config.config' has no attribute 'UNIQUE_POLOTRIAL_VISIT_NAME'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 206, in sync_unique_event
+    unique_visit_name = config.UNIQUE_POLOTRIAL_VISIT_NAME.strip()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'integracao_embrace.config.config' has no attribute 'UNIQUE_POLOTRIAL_VISIT_NAME'
+2026-09-10 16:15:26,141 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-10 16:15:46,359 - INFO - Webhook initialized for protocol Embrace
+2026-09-10 17:03:13,618 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 17:03:13,876 - INFO - Dispatch runtime: pid=11094, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 17:03:13,877 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 17:03:14,717 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 17:03:14,718 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 17:03:14,720 - INFO - Debug redcap status: 200
+2026-09-10 17:03:14,721 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 17:03:14,722 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 17:03:14,723 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 17:03:14,724 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 17:03:14,725 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-10 17:03:14,728 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': '47', 'contatos': '11111111111'}
+2026-09-10 17:03:15,539 - INFO - Polotrial: authentication succsssful
+2026-09-10 17:03:15,726 - INFO - Volunteer 1 already exists in PoloTrial with ID: 3338
+2026-09-10 17:03:15,727 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-10 17:03:17,336 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-10 17:03:17,581 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-10 17:03:17,582 - INFO - Arm matched: Embrace with ID: 283
+2026-09-10 17:03:18,430 - INFO - Participant found in PoloTrial with ID: 3313
+2026-09-10 17:03:43,740 - INFO - Participant visits retrieved: 1, for participant ID: 3313
+2026-09-10 17:03:43,741 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-10 17:03:43,742 - INFO - Participant visit found: Visita única with ID: 40707
+2026-09-10 17:03:43,913 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=PoloTrialClient.update_participant_visit() got an unexpected keyword argument 'participant_visit_id'. Did you mean 'participante_visita_id'?
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 231, in sync_unique_event
+    polotrial.update_participant_visit(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        participant_visit_id=participant_visit_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        payload=desired
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: PoloTrialClient.update_participant_visit() got an unexpected keyword argument 'participant_visit_id'. Did you mean 'participante_visita_id'?
+2026-09-10 17:18:58,184 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 17:18:58,198 - INFO - Dispatch runtime: pid=11094, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 17:18:58,199 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 17:18:58,914 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 17:18:58,915 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 17:18:58,918 - INFO - Debug redcap status: 200
+2026-09-10 17:18:58,919 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 17:18:58,923 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 17:18:58,926 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 17:18:58,928 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 17:18:58,929 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-10 17:18:58,930 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': '47', 'contatos': '11111111111'}
+2026-09-10 17:18:59,937 - INFO - Volunteer 1 already exists in PoloTrial with ID: 3338
+2026-09-10 17:18:59,940 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-10 17:19:01,646 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-10 17:19:01,860 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-10 17:19:01,861 - INFO - Arm matched: Embrace with ID: 283
+2026-09-10 17:19:02,657 - INFO - Participant found in PoloTrial with ID: 3313
+2026-09-10 17:19:28,128 - INFO - Participant visits retrieved: 1, for participant ID: 3313
+2026-09-10 17:19:28,129 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-10 17:19:28,130 - INFO - Participant visit found: Visita única with ID: 40707
+2026-09-10 17:19:28,286 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error=PoloTrialClient.update_participant_visit() got an unexpected keyword argument 'participant_visit_id'. Did you mean 'participante_visita_id'?
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 231, in sync_unique_event
+    polotrial.update_participant_visit(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        participant_visit_id=participant_visit_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        payload=desired
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: PoloTrialClient.update_participant_visit() got an unexpected keyword argument 'participant_visit_id'. Did you mean 'participante_visita_id'?
+2026-09-10 17:25:56,087 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-10 17:26:41,727 - INFO - Webhook initialized for protocol Embrace
+2026-09-10 17:26:50,481 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 17:26:50,567 - INFO - Dispatch runtime: pid=16111, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 17:26:50,568 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 17:26:51,202 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 17:26:51,203 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 17:26:51,204 - INFO - Debug redcap status: 200
+2026-09-10 17:26:51,205 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 17:26:51,206 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 17:26:51,206 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 17:26:51,207 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 17:26:51,208 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-10 17:26:51,208 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': '47', 'contatos': '11111111111'}
+2026-09-10 17:26:51,955 - INFO - Polotrial: authentication succsssful
+2026-09-10 17:26:52,166 - INFO - Volunteer 1 already exists in PoloTrial with ID: 3338
+2026-09-10 17:26:52,167 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-10 17:26:56,378 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-10 17:26:56,671 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-10 17:26:56,672 - INFO - Arm matched: Embrace with ID: 283
+2026-09-10 17:26:57,652 - INFO - Participant found in PoloTrial with ID: 3313
+2026-09-10 17:27:18,857 - INFO - Participant visits retrieved: 1, for participant ID: 3313
+2026-09-10 17:27:18,858 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-10 17:27:18,858 - INFO - Participant visit found: Visita única with ID: 40707
+2026-09-10 17:27:19,605 - INFO - Unique visit updated (id=40707) with payload: {
+  "data_estimada": "2026-09-10",
+  "data_realizada": "2026-09-10",
+  "status": 20
+}
+2026-09-10 17:27:19,883 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-10 17:27:19,884 - INFO -  - ID: 652339 | Procedure: Consulta Médica | Appointment date: None | Check field: cm_atendimento_dt=N/A | Date field: cm_atendimento_dt=N/A
+2026-09-10 17:27:19,885 - INFO -  - ID: 652340 | Procedure: Módulo Saúde | Appointment date: None | Check field: s0=N/A | Date field: s0=N/A
+2026-09-10 17:27:19,886 - INFO -  - ID: 652341 | Procedure: Módulo Identificação da Paciente | Appointment date: None | Check field: idp3=1 | Date field: idp4=2026-09-10
+2026-09-10 17:27:19,887 - INFO -  - ID: 652342 | Procedure: Módulo Menopausa | Appointment date: None | Check field: pm0=N/A | Date field: pm0=N/A
+2026-09-10 17:27:19,888 - INFO -  - ID: 652343 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: None | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-10 17:27:19,890 - INFO -  - ID: 652344 | Procedure: Questionário GAD-7 | Appointment date: None | Check field: gad7_0=N/A | Date field: gad7_0=N/A
+2026-09-10 17:27:19,891 - INFO -  - ID: 652345 | Procedure: Questionário PHQ9 | Appointment date: None | Check field: phq9_0=N/A | Date field: phq9_0=N/A
+2026-09-10 17:27:19,891 - INFO -  - ID: 652346 | Procedure: Questionário WPAI | Appointment date: None | Check field: wpai0=N/A | Date field: wpai0=N/A
+2026-09-10 17:27:19,893 - INFO -  - ID: 652347 | Procedure: Questionário Short Form - SF-36 | Appointment date: None | Check field: None=N/A | Date field: None=N/A
+2026-09-10 17:27:19,893 - INFO - DEBUG: Procedure mapping summary:
+2026-09-10 17:27:19,894 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-10 17:27:19,895 - INFO -  2. Matched with REDCap mapping: 8
+2026-09-10 17:27:19,895 - INFO -  3. Unmatched procedures: 1
+2026-09-10 17:27:19,896 - WARNING - DEBUG: Unmatched procedures (no mapping found in POLOTRIAL_UNIQUE_EVENT_PROCEDURES_MAP): ['Questionário Short Form - SF-36']
+2026-09-10 17:27:19,896 - WARNING -  - 'Questionário Short Form - SF-36'
+2026-09-10 17:27:19,909 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error='PoloTrialClient' object has no attribute 'update_participant_visit_procedure'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 238, in sync_unique_event
+    pvp_df = sync_unique_event_procedures(
+        participante_visita_id=participant_visit_id,
+    ...<2 lines>...
+        redcap_payload=redcap_payload
+    )
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 418, in sync_unique_event_procedures
+    polotrial.update_participant_visit_procedure(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PoloTrialClient' object has no attribute 'update_participant_visit_procedure'. Did you mean: 'update_participant_visit_procedures'?
+2026-09-10 17:28:20,365 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 17:28:20,368 - INFO - Dispatch runtime: pid=16111, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 17:28:20,369 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 17:28:21,049 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 17:28:21,050 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 17:28:21,050 - INFO - Debug redcap status: 200
+2026-09-10 17:28:21,051 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 17:28:21,052 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 17:28:21,052 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 17:28:21,053 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 17:28:21,054 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-10 17:28:21,054 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': '47', 'contatos': '11111111111'}
+2026-09-10 17:28:21,316 - INFO - Volunteer 1 already exists in PoloTrial with ID: 3338
+2026-09-10 17:28:21,323 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-10 17:28:22,713 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-10 17:28:22,940 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-10 17:28:22,940 - INFO - Arm matched: Embrace with ID: 283
+2026-09-10 17:28:23,860 - INFO - Participant found in PoloTrial with ID: 3313
+2026-09-10 17:28:47,420 - INFO - Participant visits retrieved: 1, for participant ID: 3313
+2026-09-10 17:28:47,421 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-10 17:28:47,422 - INFO - Participant visit found: Visita única with ID: 40707
+2026-09-10 17:28:47,618 - INFO - Unique visit already up to date (id=40707).
+2026-09-10 17:28:47,845 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-10 17:28:47,846 - INFO -  - ID: 652339 | Procedure: Consulta Médica | Appointment date: None | Check field: cm_atendimento_dt=N/A | Date field: cm_atendimento_dt=N/A
+2026-09-10 17:28:47,847 - INFO -  - ID: 652340 | Procedure: Módulo Saúde | Appointment date: None | Check field: s0=N/A | Date field: s0=N/A
+2026-09-10 17:28:47,848 - INFO -  - ID: 652341 | Procedure: Módulo Identificação da Paciente | Appointment date: None | Check field: idp3=1 | Date field: idp4=2026-09-10
+2026-09-10 17:28:47,849 - INFO -  - ID: 652342 | Procedure: Módulo Menopausa | Appointment date: None | Check field: pm0=N/A | Date field: pm0=N/A
+2026-09-10 17:28:47,849 - INFO -  - ID: 652343 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: None | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-10 17:28:47,850 - INFO -  - ID: 652344 | Procedure: Questionário GAD-7 | Appointment date: None | Check field: gad7_0=N/A | Date field: gad7_0=N/A
+2026-09-10 17:28:47,851 - INFO -  - ID: 652345 | Procedure: Questionário PHQ9 | Appointment date: None | Check field: phq9_0=N/A | Date field: phq9_0=N/A
+2026-09-10 17:28:47,851 - INFO -  - ID: 652346 | Procedure: Questionário WPAI | Appointment date: None | Check field: wpai0=N/A | Date field: wpai0=N/A
+2026-09-10 17:28:47,852 - INFO -  - ID: 652347 | Procedure: Questionário Short Form - SF-36 | Appointment date: None | Check field: None=N/A | Date field: None=N/A
+2026-09-10 17:28:47,853 - INFO - DEBUG: Procedure mapping summary:
+2026-09-10 17:28:47,853 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-10 17:28:47,854 - INFO -  2. Matched with REDCap mapping: 8
+2026-09-10 17:28:47,855 - INFO -  3. Unmatched procedures: 1
+2026-09-10 17:28:47,855 - WARNING - DEBUG: Unmatched procedures (no mapping found in POLOTRIAL_UNIQUE_EVENT_PROCEDURES_MAP): ['Questionário Short Form - SF-36']
+2026-09-10 17:28:47,855 - WARNING -  - 'Questionário Short Form - SF-36'
+2026-09-10 17:28:47,859 - ERROR - Error dispatching event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None, error='PoloTrialClient' object has no attribute 'update_participant_visit_procedure'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/webhook.py", line 213, in _run_sync
+    dispatch_event(
+    ~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        repeat_instance=repeat_instance
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py", line 58, in dispatch_event
+    sync_unique_event(
+    ~~~~~~~~~~~~~~~~~^
+        record_id=record_id,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        protocol_nickname=protocol_nickname,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 238, in sync_unique_event
+    pvp_df = sync_unique_event_procedures(
+        participante_visita_id=participant_visit_id,
+    ...<2 lines>...
+        redcap_payload=redcap_payload
+    )
+  File "/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/events/unique_visit.py", line 418, in sync_unique_event_procedures
+    polotrial.update_participant_visit_procedures(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PoloTrialClient' object has no attribute 'update_participant_visit_procedure'. Did you mean: 'update_participant_visit_procedures'?
+2026-09-10 17:29:01,047 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-10 17:29:23,660 - INFO - Webhook initialized for protocol Embrace
+2026-09-10 17:29:33,988 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 17:29:34,074 - INFO - Dispatch runtime: pid=16360, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 17:29:34,076 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 17:29:34,880 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 17:29:34,882 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 17:29:34,885 - INFO - Debug redcap status: 200
+2026-09-10 17:29:34,889 - INFO - Debug redcap response (first 30 chars): [{"record":"1","redcap_event_n
+2026-09-10 17:29:34,898 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 17:29:34,900 - INFO - REDCap: exported record 1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 17:29:34,901 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 17:29:34,902 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-10 17:29:34,904 - INFO - Volunteer payload prepared: {'nome': '1', 'iniciais': 'Teste 1', 'data_nascimento': '1981-07-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': '47', 'contatos': '11111111111'}
+2026-09-10 17:29:35,831 - INFO - Polotrial: authentication succsssful
+2026-09-10 17:29:36,025 - INFO - Volunteer 1 already exists in PoloTrial with ID: 3338
+2026-09-10 17:29:36,026 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-10 17:29:37,194 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-10 17:29:37,413 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-10 17:29:37,414 - INFO - Arm matched: Embrace with ID: 283
+2026-09-10 17:29:38,136 - INFO - Participant found in PoloTrial with ID: 3313
+2026-09-10 17:30:01,814 - INFO - Participant visits retrieved: 1, for participant ID: 3313
+2026-09-10 17:30:01,819 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-10 17:30:01,820 - INFO - Participant visit found: Visita única with ID: 40707
+2026-09-10 17:30:02,006 - INFO - Unique visit already up to date (id=40707).
+2026-09-10 17:30:02,282 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-10 17:30:02,284 - INFO -  - ID: 652339 | Procedure: Consulta Médica | Appointment date: None | Check field: cm_atendimento_dt=N/A | Date field: cm_atendimento_dt=N/A
+2026-09-10 17:30:02,286 - INFO -  - ID: 652340 | Procedure: Módulo Saúde | Appointment date: None | Check field: s0=N/A | Date field: s0=N/A
+2026-09-10 17:30:02,287 - INFO -  - ID: 652341 | Procedure: Módulo Identificação da Paciente | Appointment date: None | Check field: idp3=1 | Date field: idp4=2026-09-10
+2026-09-10 17:30:02,288 - INFO -  - ID: 652342 | Procedure: Módulo Menopausa | Appointment date: None | Check field: pm0=N/A | Date field: pm0=N/A
+2026-09-10 17:30:02,289 - INFO -  - ID: 652343 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: None | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-10 17:30:02,290 - INFO -  - ID: 652344 | Procedure: Questionário GAD-7 | Appointment date: None | Check field: gad7_0=N/A | Date field: gad7_0=N/A
+2026-09-10 17:30:02,291 - INFO -  - ID: 652345 | Procedure: Questionário PHQ9 | Appointment date: None | Check field: phq9_0=N/A | Date field: phq9_0=N/A
+2026-09-10 17:30:02,292 - INFO -  - ID: 652346 | Procedure: Questionário WPAI | Appointment date: None | Check field: wpai0=N/A | Date field: wpai0=N/A
+2026-09-10 17:30:02,294 - INFO -  - ID: 652347 | Procedure: Questionário Short Form - SF-36 | Appointment date: None | Check field: None=N/A | Date field: None=N/A
+2026-09-10 17:30:02,295 - INFO - DEBUG: Procedure mapping summary:
+2026-09-10 17:30:02,295 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-10 17:30:02,296 - INFO -  2. Matched with REDCap mapping: 8
+2026-09-10 17:30:02,297 - INFO -  3. Unmatched procedures: 1
+2026-09-10 17:30:02,298 - WARNING - DEBUG: Unmatched procedures (no mapping found in POLOTRIAL_UNIQUE_EVENT_PROCEDURES_MAP): ['Questionário Short Form - SF-36']
+2026-09-10 17:30:02,299 - WARNING -  - 'Questionário Short Form - SF-36'
+2026-09-10 17:30:02,582 - INFO - ✅ Synced procedure 'Módulo Identificação da Paciente' (ID: 652341) with date: 2026-09-10
+2026-09-10 17:30:02,585 - INFO - No date found in REDCap for procedure Consulta Médica (check_field=cm_atendimento_dt, date_field=cm_atendimento_dt). Skipping sync.
+2026-09-10 17:30:02,588 - INFO - No date found in REDCap for procedure Módulo Saúde (check_field=s0, date_field=s0). Skipping sync.
+2026-09-10 17:30:02,593 - INFO - No date found in REDCap for procedure Módulo Menopausa (check_field=pm0, date_field=pm0). Skipping sync.
+2026-09-10 17:30:02,596 - INFO - No date found in REDCap for procedure Questionário da Saúde da Mulher - WHQ	 (check_field=whq0, date_field=whq0). Skipping sync.
+2026-09-10 17:30:02,598 - INFO - No procedures to sync for pattern: Question[aáAÁ]rio\s+Short\s+Form\s+SF-36
+2026-09-10 17:30:02,601 - INFO - No date found in REDCap for procedure Questionário PHQ9 (check_field=phq9_0, date_field=phq9_0). Skipping sync.
+2026-09-10 17:30:02,604 - INFO - No date found in REDCap for procedure Questionário WPAI (check_field=wpai0, date_field=wpai0). Skipping sync.
+2026-09-10 17:30:02,608 - INFO - No date found in REDCap for procedure Questionário GAD-7 (check_field=gad7_0, date_field=gad7_0). Skipping sync.
+2026-09-10 17:30:02,609 - INFO - Unique visit procedures synchronization completed. Total procedures synced: 1/9
+2026-09-10 17:30:02,610 - INFO - Executor name from REDCap: 
+2026-09-10 17:30:02,611 - INFO - No executor name provided in REDCap payload. Skipping executor synchronization.
+2026-09-10 17:30:02,611 - INFO - Unique visit synchronization completed for record_id=1, event_name=visita_unica_arm_1
+2026-09-10 17:30:02,612 - INFO - Successfully dispatched event: record_id=1, event_name=visita_unica_arm_1, repeat_instance=None
+2026-09-10 17:31:39,383 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=240-1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 17:31:39,391 - INFO - Dispatch runtime: pid=16360, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 17:31:39,392 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 17:31:40,107 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 17:31:40,107 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 17:31:40,109 - INFO - Debug redcap status: 200
+2026-09-10 17:31:40,110 - INFO - Debug redcap response (first 30 chars): [{"record":"240-1","redcap_eve
+2026-09-10 17:31:40,111 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 17:31:40,112 - INFO - REDCap: exported record 240-1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 17:31:40,113 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 17:31:40,114 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-10 17:31:40,115 - INFO - Volunteer payload prepared: {'nome': '240-1', 'iniciais': 'Teste 2', 'data_nascimento': '1990-01-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': '47', 'contatos': '11111111111'}
+2026-09-10 17:31:42,008 - INFO - Volunteer 240-1 created in PoloTrial with ID: 3339
+2026-09-10 17:31:42,008 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-10 17:31:43,494 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-10 17:31:43,745 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-10 17:31:43,746 - INFO - Arm matched: Embrace with ID: 283
+2026-09-10 17:31:44,407 - INFO - DEBUG: Sending participant payload to PoloTrial: 
+{
+  "co_voluntario": 3339,
+  "co_protocolo": 2381,
+  "data_inclusao": "2026-09-10",
+  "id_participante": "240-1",
+  "numero_de_screening": "240-1",
+  "status_participante": "540",
+  "co_braco": 283,
+  "atualizar_agenda": "1",
+  "apagar_visitas_pendentes": "0"
+}
+2026-09-10 17:31:53,374 - INFO - DEBUG: Participant created in PoloTrial: 
+{
+  "id": 3314,
+  "apagar_visitas_pendentes": 0,
+  "id_participante": "240-1",
+  "numero_de_screening": "240-1",
+  "co_protocolo": 2381,
+  "atualizar_agenda": 1,
+  "co_braco": 283,
+  "data_inclusao": "2026-09-10T00:00:00.000Z",
+  "status_participante": 540,
+  "co_voluntario": "3339",
+  "user_id_log": 4593
+}
+2026-09-10 17:31:53,375 - INFO - Participant created in PoloTrial with ID: 3314
+2026-09-10 17:32:17,226 - INFO - Participant visits retrieved: 1, for participant ID: 3314
+2026-09-10 17:32:17,226 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-10 17:32:17,227 - INFO - Participant visit found: Visita única with ID: 40708
+2026-09-10 17:32:17,594 - INFO - Unique visit updated (id=40708) with payload: {
+  "data_estimada": "2026-09-10",
+  "data_realizada": "2026-09-10",
+  "status": 20
+}
+2026-09-10 17:32:17,873 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-10 17:32:17,879 - INFO -  - ID: 652354 | Procedure: Consulta Médica | Appointment date: None | Check field: cm_atendimento_dt=N/A | Date field: cm_atendimento_dt=N/A
+2026-09-10 17:32:17,881 - INFO -  - ID: 652355 | Procedure: Módulo Saúde | Appointment date: None | Check field: s0=N/A | Date field: s0=N/A
+2026-09-10 17:32:17,883 - INFO -  - ID: 652356 | Procedure: Módulo Identificação da Paciente | Appointment date: None | Check field: idp3=240-1 | Date field: idp4=2026-09-10
+2026-09-10 17:32:17,884 - INFO -  - ID: 652357 | Procedure: Módulo Menopausa | Appointment date: None | Check field: pm0=N/A | Date field: pm0=N/A
+2026-09-10 17:32:17,886 - INFO -  - ID: 652358 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: None | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-10 17:32:17,887 - INFO -  - ID: 652359 | Procedure: Questionário GAD-7 | Appointment date: None | Check field: gad7_0=N/A | Date field: gad7_0=N/A
+2026-09-10 17:32:17,887 - INFO -  - ID: 652360 | Procedure: Questionário PHQ9 | Appointment date: None | Check field: phq9_0=N/A | Date field: phq9_0=N/A
+2026-09-10 17:32:17,888 - INFO -  - ID: 652361 | Procedure: Questionário WPAI | Appointment date: None | Check field: wpai0=N/A | Date field: wpai0=N/A
+2026-09-10 17:32:17,889 - INFO -  - ID: 652362 | Procedure: Questionário Short Form - SF-36 | Appointment date: None | Check field: None=N/A | Date field: None=N/A
+2026-09-10 17:32:17,890 - INFO - DEBUG: Procedure mapping summary:
+2026-09-10 17:32:17,890 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-10 17:32:17,891 - INFO -  2. Matched with REDCap mapping: 8
+2026-09-10 17:32:17,893 - INFO -  3. Unmatched procedures: 1
+2026-09-10 17:32:17,894 - WARNING - DEBUG: Unmatched procedures (no mapping found in POLOTRIAL_UNIQUE_EVENT_PROCEDURES_MAP): ['Questionário Short Form - SF-36']
+2026-09-10 17:32:17,895 - WARNING -  - 'Questionário Short Form - SF-36'
+2026-09-10 17:32:18,083 - INFO - ✅ Synced procedure 'Módulo Identificação da Paciente' (ID: 652356) with date: 2026-09-10
+2026-09-10 17:32:18,087 - INFO - No date found in REDCap for procedure Consulta Médica (check_field=cm_atendimento_dt, date_field=cm_atendimento_dt). Skipping sync.
+2026-09-10 17:32:18,090 - INFO - No date found in REDCap for procedure Módulo Saúde (check_field=s0, date_field=s0). Skipping sync.
+2026-09-10 17:32:18,093 - INFO - No date found in REDCap for procedure Módulo Menopausa (check_field=pm0, date_field=pm0). Skipping sync.
+2026-09-10 17:32:18,097 - INFO - No date found in REDCap for procedure Questionário da Saúde da Mulher - WHQ	 (check_field=whq0, date_field=whq0). Skipping sync.
+2026-09-10 17:32:18,100 - INFO - No procedures to sync for pattern: Question[aáAÁ]rio\s+Short\s+Form\s+SF-36
+2026-09-10 17:32:18,102 - INFO - No date found in REDCap for procedure Questionário PHQ9 (check_field=phq9_0, date_field=phq9_0). Skipping sync.
+2026-09-10 17:32:18,105 - INFO - No date found in REDCap for procedure Questionário WPAI (check_field=wpai0, date_field=wpai0). Skipping sync.
+2026-09-10 17:32:18,109 - INFO - No date found in REDCap for procedure Questionário GAD-7 (check_field=gad7_0, date_field=gad7_0). Skipping sync.
+2026-09-10 17:32:18,110 - INFO - Unique visit procedures synchronization completed. Total procedures synced: 1/9
+2026-09-10 17:32:18,111 - INFO - Executor name from REDCap: 
+2026-09-10 17:32:18,112 - INFO - No executor name provided in REDCap payload. Skipping executor synchronization.
+2026-09-10 17:32:18,112 - INFO - Unique visit synchronization completed for record_id=240-1, event_name=visita_unica_arm_1
+2026-09-10 17:32:18,113 - INFO - Successfully dispatched event: record_id=240-1, event_name=visita_unica_arm_1, repeat_instance=None
+2026-09-10 17:32:34,956 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_idp_identificacao_da_paciente, record=240-1, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-10 17:32:34,960 - INFO - Dispatch runtime: pid=16360, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_idp_identificacao_da_paciente'
+2026-09-10 17:32:34,961 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-10 17:32:35,650 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-10 17:32:35,651 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-10 17:32:35,652 - INFO - Debug redcap status: 200
+2026-09-10 17:32:35,653 - INFO - Debug redcap response (first 30 chars): [{"record":"240-1","redcap_eve
+2026-09-10 17:32:35,654 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-10 17:32:35,656 - INFO - REDCap: exported record 240-1 for event visita_unica_arm_1, repeat_instance=None, with 11 fields from 11 entries
+2026-09-10 17:32:35,658 - INFO - Mapped gender: Mulher ("Cisgênero") ➡ None
+2026-09-10 17:32:35,659 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-10 17:32:35,659 - INFO - Volunteer payload prepared: {'nome': '240-1', 'iniciais': 'Teste 2-1', 'data_nascimento': '1990-01-01', 'sexo': None, 'email': '', 'data_inclusao': '2026-09-10', 'centro': '47', 'contatos': '11111111111'}
+2026-09-10 17:32:35,861 - INFO - Volunteer 240-1 already exists in PoloTrial with ID: 3339
+2026-09-10 17:32:35,863 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-10 17:32:36,999 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-10 17:32:37,274 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-10 17:32:37,275 - INFO - Arm matched: Embrace with ID: 283
+2026-09-10 17:32:37,958 - INFO - Participant found in PoloTrial with ID: 3314
+2026-09-10 17:33:01,518 - INFO - Participant visits retrieved: 1, for participant ID: 3314
+2026-09-10 17:33:01,520 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-10 17:33:01,521 - INFO - Participant visit found: Visita única with ID: 40708
+2026-09-10 17:33:01,717 - INFO - Unique visit already up to date (id=40708).
+2026-09-10 17:33:01,945 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-10 17:33:01,949 - INFO -  - ID: 652354 | Procedure: Consulta Médica | Appointment date: nan | Check field: cm_atendimento_dt=N/A | Date field: cm_atendimento_dt=N/A
+2026-09-10 17:33:01,950 - INFO -  - ID: 652355 | Procedure: Módulo Saúde | Appointment date: nan | Check field: s0=N/A | Date field: s0=N/A
+2026-09-10 17:33:01,951 - INFO -  - ID: 652356 | Procedure: Módulo Identificação da Paciente | Appointment date: 2026-09-10T00:00:00.000Z | Check field: idp3=240-1 | Date field: idp4=2026-09-10
+2026-09-10 17:33:01,953 - INFO -  - ID: 652357 | Procedure: Módulo Menopausa | Appointment date: nan | Check field: pm0=N/A | Date field: pm0=N/A
+2026-09-10 17:33:01,954 - INFO -  - ID: 652358 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: nan | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-10 17:33:01,955 - INFO -  - ID: 652359 | Procedure: Questionário GAD-7 | Appointment date: nan | Check field: gad7_0=N/A | Date field: gad7_0=N/A
+2026-09-10 17:33:01,961 - INFO -  - ID: 652360 | Procedure: Questionário PHQ9 | Appointment date: nan | Check field: phq9_0=N/A | Date field: phq9_0=N/A
+2026-09-10 17:33:01,962 - INFO -  - ID: 652361 | Procedure: Questionário WPAI | Appointment date: nan | Check field: wpai0=N/A | Date field: wpai0=N/A
+2026-09-10 17:33:01,965 - INFO -  - ID: 652362 | Procedure: Questionário Short Form - SF-36 | Appointment date: nan | Check field: None=N/A | Date field: None=N/A
+2026-09-10 17:33:01,966 - INFO - DEBUG: Procedure mapping summary:
+2026-09-10 17:33:01,967 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-10 17:33:01,968 - INFO -  2. Matched with REDCap mapping: 8
+2026-09-10 17:33:01,969 - INFO -  3. Unmatched procedures: 1
+2026-09-10 17:33:01,970 - WARNING - DEBUG: Unmatched procedures (no mapping found in POLOTRIAL_UNIQUE_EVENT_PROCEDURES_MAP): ['Questionário Short Form - SF-36']
+2026-09-10 17:33:01,971 - WARNING -  - 'Questionário Short Form - SF-36'
+2026-09-10 17:33:01,982 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Identifica[cçCÇ][aãAÃ]o\s+da\s+Paciente
+2026-09-10 17:33:01,986 - INFO - No date found in REDCap for procedure Consulta Médica (check_field=cm_atendimento_dt, date_field=cm_atendimento_dt). Skipping sync.
+2026-09-10 17:33:01,995 - INFO - No date found in REDCap for procedure Módulo Saúde (check_field=s0, date_field=s0). Skipping sync.
+2026-09-10 17:33:02,000 - INFO - No date found in REDCap for procedure Módulo Menopausa (check_field=pm0, date_field=pm0). Skipping sync.
+2026-09-10 17:33:02,003 - INFO - No date found in REDCap for procedure Questionário da Saúde da Mulher - WHQ	 (check_field=whq0, date_field=whq0). Skipping sync.
+2026-09-10 17:33:02,007 - INFO - No procedures to sync for pattern: Question[aáAÁ]rio\s+Short\s+Form\s+SF-36
+2026-09-10 17:33:02,015 - INFO - No date found in REDCap for procedure Questionário PHQ9 (check_field=phq9_0, date_field=phq9_0). Skipping sync.
+2026-09-10 17:33:02,019 - INFO - No date found in REDCap for procedure Questionário WPAI (check_field=wpai0, date_field=wpai0). Skipping sync.
+2026-09-10 17:33:02,031 - INFO - No date found in REDCap for procedure Questionário GAD-7 (check_field=gad7_0, date_field=gad7_0). Skipping sync.
+2026-09-10 17:33:02,037 - INFO - Unique visit procedures synchronization completed. Total procedures synced: 0/9
+2026-09-10 17:33:02,041 - INFO - Executor name from REDCap: 
+2026-09-10 17:33:02,044 - INFO - No executor name provided in REDCap payload. Skipping executor synchronization.
+2026-09-10 17:33:02,046 - INFO - Unique visit synchronization completed for record_id=240-1, event_name=visita_unica_arm_1
+2026-09-10 17:33:02,052 - INFO - Successfully dispatched event: record_id=240-1, event_name=visita_unica_arm_1, repeat_instance=None
+2026-09-10 17:39:36,312 - INFO - Shutting down webhooks for protocol Embrace

@@ -101,8 +101,8 @@ def sync_unique_event(
     gender_code = GENDER_MAPPING.get(rc("GENERO").strip(), None)
     logger.info("Mapped gender: %s ➡ %s", rc("GENERO"), gender_code)
     
-    site_code = SITE_CODE_MAPPING.get(rc("SITE").strip(), None)
-    logger.info("Mapped site: %s ➡ %s", rc("SITE"), site_code)
+    site_code = SITE_CODE_MAPPING.get(rc("CENTRO").strip(), None)
+    logger.info("Mapped site: %s ➡ %s", rc("CENTRO"), site_code)
     
     volunteer_payload = {
         "nome": rc("NOME", record_id),
@@ -125,6 +125,15 @@ def sync_unique_event(
     if existing:
         co_voluntario = int(existing['id'])
         logger.info("Volunteer %s already exists in PoloTrial with ID: %d", record_id, co_voluntario)
+        
+        changed_fields = {
+            key: value
+            for key, value in volunteer_payload.items()
+            if str(existing.get(key, "")) != str(value)
+        }
+        if changed_fields:
+            logger.info("Volunteer %s data changed in REDCap, updating in PoloTrial: %s", record_id, changed_fields)
+            polotrial.update_volunteer(co_voluntario, volunteer_payload)
     else:
         created = polotrial.create_volunteer(volunteer_payload)
         co_voluntario = int(created['id'])
@@ -143,10 +152,10 @@ def sync_unique_event(
     
     #6. Fetch the arms of the protocol and find the one that matches the unique arm name from the configuration
     arms = polotrial.list_arms(co_protocolo)
-    unique_arm_name = config.UNIQUE_ARM_NAME.strip()
+    unique_arm_name = config.POLOTRIAL_ARM_NAME.strip()
     
     if not unique_arm_name:
-        raise RuntimeError("UNIQUE_ARM_NAME is not set in the configuration.")
+        raise RuntimeError("POLOTRIAL_ARM_NAME is not set in the configuration.")
     
     arm_match = next(
         (
@@ -203,7 +212,7 @@ def sync_unique_event(
     visit = polotrial.list_participant_visits(co_participante=co_participante)
     logger.info("Participant visits retrieved: %d, for participant ID: %d", len(visit), co_participante)
     
-    unique_visit_name = config.UNIQUE_POLOTRIAL_VISIT_NAME.strip()
+    unique_visit_name = config.POLOTRIAL_UNIQUE_VISIT_NAME.strip()
     
     unique_visit = next(
         (
@@ -415,7 +424,7 @@ def sync_unique_event_procedures(
             continue
         
         #3.5. Update the procedure in PoloTrial with the formatted date
-        polotrial.update_participant_visit_procedure(
+        polotrial.update_participant_visit_procedures(
             procedure_id,
             {"data_executada": formatted_date}
         )

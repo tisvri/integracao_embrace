@@ -174,6 +174,7 @@ async def redcap_embrace_det(
         _run_sync,
         record_id=record,
         event_name=redcap_event_name,
+        instrument=instrument,
         repeat_instance = redcap_repeat_instance,
     )
     
@@ -184,12 +185,14 @@ def _run_sync(
     *,
     record_id: str,
     event_name: str,
+    instrument: str = "",
     repeat_instance: str | None = None
 ) -> None:
     """Background worker function to process the webhook event.
     Args:
         record_id (str): The record ID associated with the event.
         event_name (str): The name of the REDCap event.
+        instrument (str): The REDCap instrument (form) that triggered the DET.
         repeat_instance (Optional[str]): The repeat instance associated with the event, if any.
     
     Raises:
@@ -213,6 +216,7 @@ def _run_sync(
             redcap=_redcap,
             polotrial=_polotrial,
             protocol_nickname=_settings.protocol_nickname,
+            instrument=instrument,
             repeat_instance=repeat_instance
         )
         logger.info("Successfully dispatched event: record_id=%s, event_name=%s, repeat_instance=%s", record_id, event_name, repeat_instance)

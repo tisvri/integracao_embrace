@@ -28,7 +28,7 @@ def main():
     args = parser.parse_args()
 
     uvicorn.run(
-        "integracao_emprace.webhook:app",
+        "integracao_embrace.webhook:app",
         host=args.host,
         port=args.port,
         reload=args.reload

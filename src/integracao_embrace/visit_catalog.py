@@ -8,6 +8,7 @@ import dotenv
 #Redcap Unique Event
 REDCAP_UNIQUE_EVENT = config.REDCAP_UNIQUE_VISIT_NAME
 
+
 #Polotrial Unique Event
 POLOTRIAL_UNIQUE_EVENT = config.POLOTRIAL_UNIQUE_VISIT_NAME
 

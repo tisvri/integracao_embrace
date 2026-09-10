@@ -164,6 +164,32 @@ class PoloTrialClient:
         
         raise RuntimeError(f"Error creating volunteer: {volunteer_request.status_code} - {volunteer_request.text}")
     
+    def update_volunteer(
+        self,
+        volunteer_id: int,
+        payload: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Update a volunteer.
+
+        Args:
+            volunteer_id (int): The ID of the volunteer to update.
+            payload (Dict[str, Any]): The data to update the volunteer with.
+
+        Raises:
+            RuntimeError: If the request to the Polotrial API fails.
+
+        Returns:
+            Dict[str, Any]: The updated volunteer data.
+        """
+        update_volunteer_request = self._requests(
+            "PUT",
+            f"/voluntarios/{volunteer_id}",
+            json = payload
+        )
+        if update_volunteer_request.status_code != 200:
+            raise RuntimeError(f"Error updating volunteer: {update_volunteer_request.status_code} - {update_volunteer_request.text}")
+        return update_volunteer_request.json()
+    
     def get_protocol(
         self,
         *,
@@ -647,13 +673,14 @@ class PoloTrialClient:
     
     def update_participant_visit(
         self,
-        participante_visita_id: int,
+        # participante_visita_id: int, Antigo (com erro)
+        participant_visit_id: int,
         payload: Dict[str, Any]
     ) -> Dict[str, Any]:
         """Update a participant visit.
 
         Args:
-            participante_visita_id (int): The ID of the participant visit to update.
+            participant_visit_id (int): The ID of the participant visit to update.
             payload (Dict[str, Any]): The data to update the participant visit with.
 
         Raises:
@@ -662,11 +689,16 @@ class PoloTrialClient:
         Returns:
             Dict[str, Any]: The updated participant visit.
         """
+        # request = self._requests(
+        #     "PUT",
+        #     f"/participante_visita/{participante_visita_id}",
+        #     json=payload
+        # )
         request = self._requests(
-            "PUT",
-            f"/participante_visita/{participante_visita_id}",
-            json=payload
-        )
+                    "PUT",
+                    f"/participante_visita/{participant_visit_id}",
+                    json=payload
+                )
         if request.status_code != 200:
             raise RuntimeError(f"Error updating participant visit: {request.status_code} - {request.text}")
         return request.json()
