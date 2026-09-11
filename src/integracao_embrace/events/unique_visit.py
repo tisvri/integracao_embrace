@@ -478,7 +478,7 @@ def sync_executor(
         return
     executor_id = int(person['id'])
     
-    existing_links = polotrial.list_procedure_executors(procedure_id=procedure_id)
+    existing_links = polotrial.list_procedure_executors(co_participante_visita_procedimento=procedure_id)
     already_linked = any(int(x.get("executor", -1)) == executor_id for x in existing_links)
     if already_linked:
         logger.info(

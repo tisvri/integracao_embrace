@@ -504,7 +504,7 @@ class PoloTrialClient:
             json = payload
         )
         
-        if procedure_request.status_code != 200:
+        if procedure_request.status_code not in (200, 201):
             raise RuntimeError(f"Error creating participant visit procedure: {procedure_request.status_code} - {procedure_request.text}")
         return procedure_request.json()
     
@@ -556,7 +556,7 @@ class PoloTrialClient:
             "/participante_visita_procedimento_executor",
             json=payload
         )
-        if executor_request.status_code != 200:
+        if executor_request.status_code not in (200, 201):
             raise RuntimeError(f"Error creating procedure executor: {executor_request.status_code} - {executor_request.text}")
         return executor_request.json()
     

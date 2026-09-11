@@ -38,7 +38,7 @@ POLOTRIAL_UNIQUE_EVENT_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     },
     #6.
     {
-        "procedure_name": r"Question[aáAÁ]rio\s+Short\s+Form\s+SF-36",
+        "procedure_name": r"Question[aáAÁ]rio\s+Short\s+Form\s-\s+SF-36",
         # "co_procedimento": "",
         "redcap_check_field": "sf36_0", 
         "redcap_date_field": "sf36_0" 
