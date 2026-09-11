@@ -3908,3 +3908,5 @@ requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected(
 2026-09-11 14:37:39,259 - INFO - Executor 'Eduardo Augusto Rabelo Socca' (ID: 2761) is already linked to procedure ID: 652384. No action needed.
 2026-09-11 14:37:39,260 - INFO - Unique visit synchronization completed for record_id=240-3, event_name=visita_unica_arm_1
 2026-09-11 14:37:39,261 - INFO - Successfully dispatched event: record_id=240-3, event_name=visita_unica_arm_1, repeat_instance=None
+2026-09-11 17:58:36,352 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-11 17:59:30,977 - INFO - Webhook initialized for protocol Embrace
