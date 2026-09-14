@@ -3910,3 +3910,397 @@ requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected(
 2026-09-11 14:37:39,261 - INFO - Successfully dispatched event: record_id=240-3, event_name=visita_unica_arm_1, repeat_instance=None
 2026-09-11 17:58:36,352 - INFO - Shutting down webhooks for protocol Embrace
 2026-09-11 17:59:30,977 - INFO - Webhook initialized for protocol Embrace
+2026-09-11 20:00:40,061 - INFO - Received webhook from REDCap DET: project_id=68, username=[survey respondent], instrument=modulo_do_participante, record=240-4, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-11 20:00:40,330 - INFO - Dispatch runtime: pid=177558, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_do_participante'
+2026-09-11 20:00:40,332 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-11 20:00:44,832 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-11 20:00:44,833 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-11 20:00:44,834 - INFO - Debug redcap status: 200
+2026-09-11 20:00:44,834 - INFO - Debug redcap response (first 30 chars): [{"record":"240-4","redcap_eve
+2026-09-11 20:00:44,836 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-11 20:00:44,837 - INFO - REDCap: exported record 240-4 for event visita_unica_arm_1, repeat_instance=None, with 57 fields from 57 entries
+2026-09-11 20:00:44,839 - INFO - Mapped gender:  ➡ None
+2026-09-11 20:00:44,840 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-11 20:00:44,841 - INFO - Volunteer payload prepared: {'nome': '240-4', 'iniciais': 'Luana Batista Fernandes', 'data_nascimento': '2026-05-31', 'sexo': None, 'email': '', 'data_inclusao': '1972-09-05', 'centro': '47', 'contatos': '11111111111'}
+2026-09-11 20:00:45,669 - INFO - Polotrial: authentication succsssful
+2026-09-11 20:00:45,876 - INFO - Volunteer 240-4 already exists in PoloTrial with ID: 3342
+2026-09-11 20:00:45,876 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-11 20:00:46,487 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-11 20:00:46,688 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-11 20:00:46,689 - INFO - Arm matched: Embrace with ID: 283
+2026-09-11 20:00:47,340 - INFO - Participant found in PoloTrial with ID: 3317
+2026-09-11 20:01:08,963 - INFO - Participant visits retrieved: 1, for participant ID: 3317
+2026-09-11 20:01:08,964 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-11 20:01:08,965 - INFO - Participant visit found: Visita única with ID: 40711
+2026-09-11 20:01:09,150 - INFO - Unique visit already up to date (id=40711).
+2026-09-11 20:01:09,574 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-11 20:01:09,576 - INFO -  - ID: 652399 | Procedure: Consulta Médica | Appointment date: nan | Check field: cm_atendimento_dt=N/A | Date field: cm_atendimento_dt=N/A
+2026-09-11 20:01:09,577 - INFO -  - ID: 652400 | Procedure: Módulo Saúde | Appointment date: nan | Check field: s0=N/A | Date field: s0=N/A
+2026-09-11 20:01:09,578 - INFO -  - ID: 652401 | Procedure: Módulo Identificação da Paciente | Appointment date: 2026-09-11T00:00:00.000Z | Check field: idp3=240-4 | Date field: idp4=1972-09-05
+2026-09-11 20:01:09,579 - INFO -  - ID: 652402 | Procedure: Módulo Menopausa | Appointment date: 2026-09-11T00:00:00.000Z | Check field: pm0=2026-09-11 | Date field: pm0=2026-09-11
+2026-09-11 20:01:09,581 - INFO -  - ID: 652403 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: nan | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-11 20:01:09,583 - INFO -  - ID: 652404 | Procedure: Questionário GAD-7 | Appointment date: nan | Check field: gad7_0=N/A | Date field: gad7_0=N/A
+2026-09-11 20:01:09,584 - INFO -  - ID: 652405 | Procedure: Questionário PHQ9 | Appointment date: nan | Check field: phq9_0=N/A | Date field: phq9_0=N/A
+2026-09-11 20:01:09,585 - INFO -  - ID: 652406 | Procedure: Questionário WPAI | Appointment date: nan | Check field: wpai0=N/A | Date field: wpai0=N/A
+2026-09-11 20:01:09,586 - INFO -  - ID: 652407 | Procedure: Questionário Short Form - SF-36 | Appointment date: nan | Check field: sf36_0=N/A | Date field: sf36_0=N/A
+2026-09-11 20:01:09,587 - INFO - DEBUG: Procedure mapping summary:
+2026-09-11 20:01:09,587 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-11 20:01:09,588 - INFO -  2. Matched with REDCap mapping: 9
+2026-09-11 20:01:09,589 - INFO -  3. Unmatched procedures: 0
+2026-09-11 20:01:09,626 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Identifica[cçCÇ][aãAÃ]o\s+da\s+Paciente
+2026-09-11 20:01:09,635 - INFO - No date found in REDCap for procedure Consulta Médica (check_field=cm_atendimento_dt, date_field=cm_atendimento_dt). Skipping sync.
+2026-09-11 20:01:09,638 - INFO - No date found in REDCap for procedure Módulo Saúde (check_field=s0, date_field=s0). Skipping sync.
+2026-09-11 20:01:09,642 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Menopausa
+2026-09-11 20:01:09,645 - INFO - No date found in REDCap for procedure Questionário da Saúde da Mulher - WHQ	 (check_field=whq0, date_field=whq0). Skipping sync.
+2026-09-11 20:01:09,648 - INFO - No date found in REDCap for procedure Questionário Short Form - SF-36 (check_field=sf36_0, date_field=sf36_0). Skipping sync.
+2026-09-11 20:01:09,652 - INFO - No date found in REDCap for procedure Questionário PHQ9 (check_field=phq9_0, date_field=phq9_0). Skipping sync.
+2026-09-11 20:01:09,657 - INFO - No date found in REDCap for procedure Questionário WPAI (check_field=wpai0, date_field=wpai0). Skipping sync.
+2026-09-11 20:01:09,661 - INFO - No date found in REDCap for procedure Questionário GAD-7 (check_field=gad7_0, date_field=gad7_0). Skipping sync.
+2026-09-11 20:01:09,662 - INFO - Unique visit procedures synchronization completed. Total procedures synced: 0/9
+2026-09-11 20:01:09,663 - INFO - Executor name from REDCap: 
+2026-09-11 20:01:09,664 - INFO - No executor name provided in REDCap payload. Skipping executor synchronization.
+2026-09-11 20:01:09,664 - INFO - Unique visit synchronization completed for record_id=240-4, event_name=visita_unica_arm_1
+2026-09-11 20:01:09,665 - INFO - Successfully dispatched event: record_id=240-4, event_name=visita_unica_arm_1, repeat_instance=None
+2026-09-14 14:14:09,814 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=status_do_participante, record=240-4, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-14 14:14:09,889 - INFO - Dispatch runtime: pid=177558, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='status_do_participante'
+2026-09-14 14:14:09,894 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-14 14:14:11,058 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-14 14:14:11,073 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-14 14:14:11,077 - INFO - Debug redcap status: 200
+2026-09-14 14:14:11,080 - INFO - Debug redcap response (first 30 chars): [{"record":"240-4","redcap_eve
+2026-09-14 14:14:11,087 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-14 14:14:11,090 - INFO - REDCap: exported record 240-4 for event visita_unica_arm_1, repeat_instance=None, with 57 fields from 57 entries
+2026-09-14 14:14:11,097 - INFO - Mapped gender:  ➡ None
+2026-09-14 14:14:11,099 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-14 14:14:11,110 - INFO - Volunteer payload prepared: {'nome': '240-4', 'iniciais': 'Luana Batista Fernandes', 'data_nascimento': '2026-05-31', 'sexo': None, 'email': '', 'data_inclusao': '1972-09-05', 'centro': '47', 'contatos': '11111111111'}
+2026-09-14 14:14:11,632 - WARNING - Polotrial: auth failed (401). Retrying login onde...
+2026-09-14 14:14:12,037 - INFO - Polotrial: authentication succsssful
+2026-09-14 14:14:12,238 - INFO - Volunteer 240-4 already exists in PoloTrial with ID: 3342
+2026-09-14 14:14:12,239 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-14 14:14:12,658 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-14 14:14:12,866 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-14 14:14:12,869 - INFO - Arm matched: Embrace with ID: 283
+2026-09-14 14:14:13,523 - INFO - Participant found in PoloTrial with ID: 3317
+2026-09-14 14:14:38,378 - INFO - Participant visits retrieved: 1, for participant ID: 3317
+2026-09-14 14:14:38,380 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-14 14:14:38,381 - INFO - Participant visit found: Visita única with ID: 40711
+2026-09-14 14:14:38,562 - INFO - Unique visit already up to date (id=40711).
+2026-09-14 14:14:38,915 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-14 14:14:38,916 - INFO -  - ID: 652399 | Procedure: Consulta Médica | Appointment date: nan | Check field: cm_atendimento_dt=N/A | Date field: cm_atendimento_dt=N/A
+2026-09-14 14:14:38,918 - INFO -  - ID: 652400 | Procedure: Módulo Saúde | Appointment date: nan | Check field: s0=N/A | Date field: s0=N/A
+2026-09-14 14:14:38,919 - INFO -  - ID: 652401 | Procedure: Módulo Identificação da Paciente | Appointment date: 2026-09-11T00:00:00.000Z | Check field: idp3=240-4 | Date field: idp4=1972-09-05
+2026-09-14 14:14:38,920 - INFO -  - ID: 652402 | Procedure: Módulo Menopausa | Appointment date: 2026-09-11T00:00:00.000Z | Check field: pm0=2026-09-11 | Date field: pm0=2026-09-11
+2026-09-14 14:14:38,922 - INFO -  - ID: 652403 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: nan | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-14 14:14:38,924 - INFO -  - ID: 652404 | Procedure: Questionário GAD-7 | Appointment date: nan | Check field: gad7_0=N/A | Date field: gad7_0=N/A
+2026-09-14 14:14:38,926 - INFO -  - ID: 652405 | Procedure: Questionário PHQ9 | Appointment date: nan | Check field: phq9_0=N/A | Date field: phq9_0=N/A
+2026-09-14 14:14:38,927 - INFO -  - ID: 652406 | Procedure: Questionário WPAI | Appointment date: nan | Check field: wpai0=N/A | Date field: wpai0=N/A
+2026-09-14 14:14:38,928 - INFO -  - ID: 652407 | Procedure: Questionário Short Form - SF-36 | Appointment date: nan | Check field: sf36_0=N/A | Date field: sf36_0=N/A
+2026-09-14 14:14:38,929 - INFO - DEBUG: Procedure mapping summary:
+2026-09-14 14:14:38,930 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-14 14:14:38,931 - INFO -  2. Matched with REDCap mapping: 9
+2026-09-14 14:14:38,933 - INFO -  3. Unmatched procedures: 0
+2026-09-14 14:14:38,966 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Identifica[cçCÇ][aãAÃ]o\s+da\s+Paciente
+2026-09-14 14:14:38,978 - INFO - No date found in REDCap for procedure Consulta Médica (check_field=cm_atendimento_dt, date_field=cm_atendimento_dt). Skipping sync.
+2026-09-14 14:14:38,982 - INFO - No date found in REDCap for procedure Módulo Saúde (check_field=s0, date_field=s0). Skipping sync.
+2026-09-14 14:14:38,990 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Menopausa
+2026-09-14 14:14:38,996 - INFO - No date found in REDCap for procedure Questionário da Saúde da Mulher - WHQ	 (check_field=whq0, date_field=whq0). Skipping sync.
+2026-09-14 14:14:39,000 - INFO - No date found in REDCap for procedure Questionário Short Form - SF-36 (check_field=sf36_0, date_field=sf36_0). Skipping sync.
+2026-09-14 14:14:39,006 - INFO - No date found in REDCap for procedure Questionário PHQ9 (check_field=phq9_0, date_field=phq9_0). Skipping sync.
+2026-09-14 14:14:39,010 - INFO - No date found in REDCap for procedure Questionário WPAI (check_field=wpai0, date_field=wpai0). Skipping sync.
+2026-09-14 14:14:39,013 - INFO - No date found in REDCap for procedure Questionário GAD-7 (check_field=gad7_0, date_field=gad7_0). Skipping sync.
+2026-09-14 14:14:39,014 - INFO - Unique visit procedures synchronization completed. Total procedures synced: 0/9
+2026-09-14 14:14:39,016 - INFO - Executor name from REDCap: 
+2026-09-14 14:14:39,017 - INFO - No executor name provided in REDCap payload. Skipping executor synchronization.
+2026-09-14 14:14:39,018 - INFO - Unique visit synchronization completed for record_id=240-4, event_name=visita_unica_arm_1
+2026-09-14 14:14:39,019 - INFO - Successfully dispatched event: record_id=240-4, event_name=visita_unica_arm_1, repeat_instance=None
+2026-09-14 14:23:34,824 - INFO - Shutting down webhooks for protocol Embrace
+2026-09-14 14:24:27,396 - INFO - Webhook initialized for protocol Embrace
+2026-09-14 14:24:27,438 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=status_do_participante, record=240-4, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-14 14:24:27,630 - INFO - Dispatch runtime: pid=977515, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='status_do_participante'
+2026-09-14 14:24:27,632 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-14 14:24:28,480 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-14 14:24:28,486 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-14 14:24:28,491 - INFO - Debug redcap status: 200
+2026-09-14 14:24:28,493 - INFO - Debug redcap response (first 30 chars): [{"record":"240-4","redcap_eve
+2026-09-14 14:24:28,496 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-14 14:24:28,506 - INFO - REDCap: exported record 240-4 for event visita_unica_arm_1, repeat_instance=None, with 57 fields from 57 entries
+2026-09-14 14:24:28,512 - INFO - Mapped gender:  ➡ None
+2026-09-14 14:24:28,517 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-14 14:24:28,525 - INFO - Volunteer payload prepared: {'nome': '240-4', 'iniciais': 'Luana Batista Fernandes', 'data_nascimento': '2026-05-31', 'sexo': None, 'email': '', 'data_inclusao': '1972-09-05', 'centro': '47', 'contatos': '11111111111'}
+2026-09-14 14:24:29,758 - INFO - Polotrial: authentication succsssful
+2026-09-14 14:24:29,976 - INFO - Volunteer 240-4 already exists in PoloTrial with ID: 3342
+2026-09-14 14:24:29,985 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-14 14:24:30,489 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-14 14:24:30,769 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-14 14:24:30,770 - INFO - Arm matched: Embrace with ID: 283
+2026-09-14 14:24:31,376 - INFO - Participant found in PoloTrial with ID: 3317
+2026-09-14 14:24:52,879 - INFO - Participant visits retrieved: 1, for participant ID: 3317
+2026-09-14 14:24:52,880 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-14 14:24:52,881 - INFO - Participant visit found: Visita única with ID: 40711
+2026-09-14 14:24:53,081 - INFO - Unique visit already up to date (id=40711).
+2026-09-14 14:24:53,412 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-14 14:24:53,414 - INFO -  - ID: 652399 | Procedure: Consulta Médica | Appointment date: nan | Check field: cm_atendimento_dt=N/A | Date field: cm_atendimento_dt=N/A
+2026-09-14 14:24:53,415 - INFO -  - ID: 652400 | Procedure: Módulo Saúde | Appointment date: nan | Check field: s0=N/A | Date field: s0=N/A
+2026-09-14 14:24:53,415 - INFO -  - ID: 652401 | Procedure: Módulo Identificação da Paciente | Appointment date: 2026-09-11T00:00:00.000Z | Check field: idp3=240-4 | Date field: idp4=1972-09-05
+2026-09-14 14:24:53,416 - INFO -  - ID: 652402 | Procedure: Módulo Menopausa | Appointment date: 2026-09-11T00:00:00.000Z | Check field: pm0=2026-09-11 | Date field: pm0=2026-09-11
+2026-09-14 14:24:53,417 - INFO -  - ID: 652403 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: nan | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-14 14:24:53,418 - INFO -  - ID: 652404 | Procedure: Questionário GAD-7 | Appointment date: nan | Check field: gad7_0=N/A | Date field: gad7_0=N/A
+2026-09-14 14:24:53,419 - INFO -  - ID: 652405 | Procedure: Questionário PHQ9 | Appointment date: nan | Check field: phq9_0=N/A | Date field: phq9_0=N/A
+2026-09-14 14:24:53,420 - INFO -  - ID: 652406 | Procedure: Questionário WPAI | Appointment date: nan | Check field: wpai0=N/A | Date field: wpai0=N/A
+2026-09-14 14:24:53,421 - INFO -  - ID: 652407 | Procedure: Questionário Short Form - SF-36 | Appointment date: nan | Check field: sf36_0=N/A | Date field: sf36_0=N/A
+2026-09-14 14:24:53,421 - INFO - DEBUG: Procedure mapping summary:
+2026-09-14 14:24:53,422 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-14 14:24:53,422 - INFO -  2. Matched with REDCap mapping: 9
+2026-09-14 14:24:53,423 - INFO -  3. Unmatched procedures: 0
+2026-09-14 14:24:53,434 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Identifica[cçCÇ][aãAÃ]o\s+da\s+Paciente
+2026-09-14 14:24:53,440 - INFO - No date found in REDCap for procedure Consulta Médica (check_field=cm_atendimento_dt, date_field=cm_atendimento_dt). Skipping sync.
+2026-09-14 14:24:53,443 - INFO - No date found in REDCap for procedure Módulo Saúde (check_field=s0, date_field=s0). Skipping sync.
+2026-09-14 14:24:53,446 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Menopausa
+2026-09-14 14:24:53,449 - INFO - No date found in REDCap for procedure Questionário da Saúde da Mulher - WHQ	 (check_field=whq0, date_field=whq0). Skipping sync.
+2026-09-14 14:24:53,451 - INFO - No date found in REDCap for procedure Questionário Short Form - SF-36 (check_field=sf36_0, date_field=sf36_0). Skipping sync.
+2026-09-14 14:24:53,453 - INFO - No date found in REDCap for procedure Questionário PHQ9 (check_field=phq9_0, date_field=phq9_0). Skipping sync.
+2026-09-14 14:24:53,455 - INFO - No date found in REDCap for procedure Questionário WPAI (check_field=wpai0, date_field=wpai0). Skipping sync.
+2026-09-14 14:24:53,458 - INFO - No date found in REDCap for procedure Questionário GAD-7 (check_field=gad7_0, date_field=gad7_0). Skipping sync.
+2026-09-14 14:24:53,459 - INFO - Unique visit procedures synchronization completed. Total procedures synced: 0/9
+2026-09-14 14:24:53,460 - INFO - Executor name from REDCap: 
+2026-09-14 14:24:53,460 - INFO - No executor name provided in REDCap payload. Skipping executor synchronization.
+2026-09-14 14:24:53,461 - INFO - Unique visit synchronization completed for record_id=240-4, event_name=visita_unica_arm_1
+2026-09-14 14:24:53,462 - INFO - Dispatching to participant status update handler: instrument=status_do_participante
+2026-09-14 14:24:54,208 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-14 14:24:54,209 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-14 14:24:54,210 - INFO - Debug redcap status: 200
+2026-09-14 14:24:54,210 - INFO - Debug redcap response (first 30 chars): [{"record":"240-4","redcap_eve
+2026-09-14 14:24:54,212 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-14 14:24:54,213 - INFO - REDCap: exported record 240-4 for event visita_unica_arm_1, repeat_instance=None, with 57 fields from 57 entries
+2026-09-14 14:24:54,214 - INFO - Retrieved REDCap payload for record_id=240-4, event_name=visita_unica_arm_1: {'asr1': '12', 'asr2': 'Não', 'asr3': '2026-09-10', 'asr4': 'Não', 'asr5': 'Não sei', 'cm1': 'teste', 'cm10': 'Não sei opinar', 'cm11': 'Não concordo', 'cm12': 'teste', 'cm19': 'Concordo', 'cm2': 'Pouco informado (a)', 'cm20': 'Não concordo', 'cm21': 'Não concordo', 'cm22': 'Concordo', 'cm23': 'Concordo', 'cm24': 'Concordo', 'cm25': 'Concordo', 'cm26': 'Concordo', 'cm27': 'Concordo', 'cm28': 'Concordo', 'cm29': 'Concordo', 'cm3': 'Concordo', 'cm30': 'Concordo', 'cm31': 'Concordo', 'cm32': 'Concordo', 'cm4': 'Não sei opinar', 'cm5': 'Não concordo', 'cm6': 'Não concordo', 'cm7': 'Não concordo', 'cm8': 'Não sei opinar', 'cm9': 'Não sei opinar', 'idp_faixa_etaria': '2', 'idp1': 'Luana Batista Fernandes', 'idp3': '240-4', 'idp4': '1972-09-05', 'idp5': '53', 'idp6': '2026-05-31', 'idp7': 'SVRI Clínica Morumbi', 'idp8': '26', 'idp9': 'SP', 'modulo_do_participante_complete': 'Incomplete', 'modulo_idp_identificacao_da_paciente_complete': 'Complete', 'modulo_m_menopausa_complete': 'Complete', 'modulo_participante_dt': '2026-09-11', 'modulo_whq_questionario_da_saude_da_mulher_complete': 'Incomplete', 'pm0': '2026-09-11', 'pm1': 'Concordo', 'pm2': 'Concordo', 'pm3': 'Concordo', 'pm4': 'Concordo', 'pm5': 'Concordo', 'pm6': 'Concordo', 'qsm34': 'NA', 'sc1_1': 'Dor de cabeça', 'status_do_participante_complete': 'Complete', 'status_participante': 'Concluído', 'status_participante_dt': '2026-09-11'}
+2026-09-14 14:24:54,503 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-14 14:24:54,503 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-14 14:24:54,504 - INFO - Debug redcap status: 200
+2026-09-14 14:24:54,505 - INFO - Debug redcap response (first 30 chars): [{"record":"240-4","redcap_eve
+2026-09-14 14:24:54,507 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=[]
+2026-09-14 14:24:54,508 - INFO - REDCap: exported record 240-4 for event visita_unica_arm_1, repeat_instance=None, with 57 fields from 57 entries
+2026-09-14 14:24:54,835 - INFO - Found volunteer in PoloTrial: record_id=240-4, volunteer_code=3342
+2026-09-14 14:24:56,088 - INFO - Found protocol in PoloTrial: site_code=47, protocol_nickname=Embrace, protocol_code=2381
+2026-09-14 14:24:56,961 - INFO - Found participant in PoloTrial: volunteer_code=3342, protocol_code=2381, participant_code=3317
+2026-09-14 14:24:56,962 - INFO - Mapped REDCap status=Concluído to PoloTrial status_code=308 for record_id=240-4
+2026-09-14 14:25:01,223 - INFO - Updated participant status in PoloTrial for record_id=240-4: 540 -> 308
+2026-09-14 14:25:01,224 - INFO - Successfully dispatched event: record_id=240-4, event_name=visita_unica_arm_1, repeat_instance=None
+2026-09-14 14:26:41,234 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=mdulo_cm_consulta_mdica, record=240-4, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=1, redcap_repeat_instrument=mdulo_cm_consulta_mdica, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-14 14:26:41,237 - INFO - Dispatch runtime: pid=977515, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='mdulo_cm_consulta_mdica'
+2026-09-14 14:26:41,238 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-14 14:26:42,112 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-14 14:26:42,113 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-14 14:26:42,114 - INFO - Debug redcap status: 200
+2026-09-14 14:26:42,115 - INFO - Debug redcap response (first 30 chars): [{"record":"240-4","redcap_eve
+2026-09-14 14:26:42,117 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=['', '1']
+2026-09-14 14:26:42,118 - INFO - REDCap: exported record 240-4 for event visita_unica_arm_1, repeat_instance=None, with 77 fields from 77 entries
+2026-09-14 14:26:42,120 - INFO - Mapped gender:  ➡ None
+2026-09-14 14:26:42,121 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-14 14:26:42,121 - INFO - Volunteer payload prepared: {'nome': '240-4', 'iniciais': 'Luana Batista Fernandes', 'data_nascimento': '2026-05-31', 'sexo': None, 'email': '', 'data_inclusao': '1972-09-05', 'centro': '47', 'contatos': '11111111111'}
+2026-09-14 14:26:42,354 - INFO - Volunteer 240-4 already exists in PoloTrial with ID: 3342
+2026-09-14 14:26:42,355 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-14 14:26:42,810 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-14 14:26:43,115 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-14 14:26:43,117 - INFO - Arm matched: Embrace with ID: 283
+2026-09-14 14:26:46,782 - INFO - Participant found in PoloTrial with ID: 3317
+2026-09-14 14:27:07,350 - INFO - Participant visits retrieved: 1, for participant ID: 3317
+2026-09-14 14:27:07,351 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-14 14:27:07,351 - INFO - Participant visit found: Visita única with ID: 40711
+2026-09-14 14:27:07,521 - INFO - Unique visit already up to date (id=40711).
+2026-09-14 14:27:07,738 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-14 14:27:07,740 - INFO -  - ID: 652399 | Procedure: Consulta Médica | Appointment date: nan | Check field: cm_atendimento_dt=2026-09-14 | Date field: cm_atendimento_dt=2026-09-14
+2026-09-14 14:27:07,743 - INFO -  - ID: 652400 | Procedure: Módulo Saúde | Appointment date: nan | Check field: s0=N/A | Date field: s0=N/A
+2026-09-14 14:27:07,744 - INFO -  - ID: 652401 | Procedure: Módulo Identificação da Paciente | Appointment date: 2026-09-11T00:00:00.000Z | Check field: idp3=240-4 | Date field: idp4=1972-09-05
+2026-09-14 14:27:07,746 - INFO -  - ID: 652402 | Procedure: Módulo Menopausa | Appointment date: 2026-09-11T00:00:00.000Z | Check field: pm0=2026-09-11 | Date field: pm0=2026-09-11
+2026-09-14 14:27:07,747 - INFO -  - ID: 652403 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: nan | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-14 14:27:07,748 - INFO -  - ID: 652404 | Procedure: Questionário GAD-7 | Appointment date: nan | Check field: gad7_0=N/A | Date field: gad7_0=N/A
+2026-09-14 14:27:07,749 - INFO -  - ID: 652405 | Procedure: Questionário PHQ9 | Appointment date: nan | Check field: phq9_0=N/A | Date field: phq9_0=N/A
+2026-09-14 14:27:07,750 - INFO -  - ID: 652406 | Procedure: Questionário WPAI | Appointment date: nan | Check field: wpai0=N/A | Date field: wpai0=N/A
+2026-09-14 14:27:07,751 - INFO -  - ID: 652407 | Procedure: Questionário Short Form - SF-36 | Appointment date: nan | Check field: sf36_0=N/A | Date field: sf36_0=N/A
+2026-09-14 14:27:07,752 - INFO - DEBUG: Procedure mapping summary:
+2026-09-14 14:27:07,756 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-14 14:27:07,759 - INFO -  2. Matched with REDCap mapping: 9
+2026-09-14 14:27:07,760 - INFO -  3. Unmatched procedures: 0
+2026-09-14 14:27:07,764 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Identifica[cçCÇ][aãAÃ]o\s+da\s+Paciente
+2026-09-14 14:27:07,967 - INFO - ✅ Synced procedure 'Consulta Médica' (ID: 652399) with date: 2026-09-14
+2026-09-14 14:27:07,971 - INFO - No date found in REDCap for procedure Módulo Saúde (check_field=s0, date_field=s0). Skipping sync.
+2026-09-14 14:27:07,974 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Menopausa
+2026-09-14 14:27:07,980 - INFO - No date found in REDCap for procedure Questionário da Saúde da Mulher - WHQ	 (check_field=whq0, date_field=whq0). Skipping sync.
+2026-09-14 14:27:07,984 - INFO - No date found in REDCap for procedure Questionário Short Form - SF-36 (check_field=sf36_0, date_field=sf36_0). Skipping sync.
+2026-09-14 14:27:07,988 - INFO - No date found in REDCap for procedure Questionário PHQ9 (check_field=phq9_0, date_field=phq9_0). Skipping sync.
+2026-09-14 14:27:07,992 - INFO - No date found in REDCap for procedure Questionário WPAI (check_field=wpai0, date_field=wpai0). Skipping sync.
+2026-09-14 14:27:07,999 - INFO - No date found in REDCap for procedure Questionário GAD-7 (check_field=gad7_0, date_field=gad7_0). Skipping sync.
+2026-09-14 14:27:08,000 - INFO - Unique visit procedures synchronization completed. Total procedures synced: 1/9
+2026-09-14 14:27:08,002 - INFO - Executor name from REDCap: Eduardo Augusto Rabelo Socca
+2026-09-14 14:27:08,690 - INFO - Unique visit: Executor 'Eduardo Augusto Rabelo Socca' (ID: 2761) linked to procedure ID: 652399 with payload: {
+  "co_participante_visita_procedimento": 652399,
+  "executor": 2761,
+  "data_realizada": "2026-09-14",
+  "data_previsto_pagamento": "",
+  "data_pagamento_realizado": "",
+  "valor": "",
+  "valor_total_procedimento": "",
+  "observacoes": ""
+}. Response: {
+  "id": 17899,
+  "observacoes": "",
+  "valor_total_procedimento": "",
+  "valor": "",
+  "executor": 2761,
+  "co_participante_visita_procedimento": 652399,
+  "data_realizada": "2026-09-14T00:00:00.000Z",
+  "data_previsto_pagamento": null,
+  "user_id_log": 4593
+}
+2026-09-14 14:27:08,691 - INFO - Unique visit synchronization completed for record_id=240-4, event_name=visita_unica_arm_1
+2026-09-14 14:27:08,692 - INFO - Successfully dispatched event: record_id=240-4, event_name=visita_unica_arm_1, repeat_instance=1
+2026-09-14 14:29:09,192 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_s_saude, record=240-4, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-14 14:29:09,195 - INFO - Dispatch runtime: pid=977515, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_s_saude'
+2026-09-14 14:29:09,196 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-14 14:29:09,911 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-14 14:29:09,912 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-14 14:29:09,913 - INFO - Debug redcap status: 200
+2026-09-14 14:29:09,914 - INFO - Debug redcap response (first 30 chars): [{"record":"240-4","redcap_eve
+2026-09-14 14:29:09,916 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=['', '1']
+2026-09-14 14:29:09,917 - INFO - REDCap: exported record 240-4 for event visita_unica_arm_1, repeat_instance=None, with 138 fields from 150 entries
+2026-09-14 14:29:09,919 - INFO - Mapped gender:  ➡ None
+2026-09-14 14:29:09,920 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-14 14:29:09,921 - INFO - Volunteer payload prepared: {'nome': '240-4', 'iniciais': 'Luana Batista Fernandes', 'data_nascimento': '2026-05-31', 'sexo': None, 'email': '', 'data_inclusao': '1972-09-05', 'centro': '47', 'contatos': '11111111111'}
+2026-09-14 14:29:10,141 - INFO - Volunteer 240-4 already exists in PoloTrial with ID: 3342
+2026-09-14 14:29:10,145 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-14 14:29:10,685 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-14 14:29:10,918 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-14 14:29:10,931 - INFO - Arm matched: Embrace with ID: 283
+2026-09-14 14:29:11,510 - INFO - Participant found in PoloTrial with ID: 3317
+2026-09-14 14:29:32,198 - INFO - Participant visits retrieved: 1, for participant ID: 3317
+2026-09-14 14:29:32,198 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-14 14:29:32,199 - INFO - Participant visit found: Visita única with ID: 40711
+2026-09-14 14:29:32,410 - INFO - Unique visit already up to date (id=40711).
+2026-09-14 14:29:32,737 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-14 14:29:32,739 - INFO -  - ID: 652399 | Procedure: Consulta Médica | Appointment date: 2026-09-14T00:00:00.000Z | Check field: cm_atendimento_dt=2026-09-14 | Date field: cm_atendimento_dt=2026-09-14
+2026-09-14 14:29:32,740 - INFO -  - ID: 652400 | Procedure: Módulo Saúde | Appointment date: nan | Check field: s0=2026-09-14 | Date field: s0=2026-09-14
+2026-09-14 14:29:32,742 - INFO -  - ID: 652401 | Procedure: Módulo Identificação da Paciente | Appointment date: 2026-09-11T00:00:00.000Z | Check field: idp3=240-4 | Date field: idp4=1972-09-05
+2026-09-14 14:29:32,743 - INFO -  - ID: 652402 | Procedure: Módulo Menopausa | Appointment date: 2026-09-11T00:00:00.000Z | Check field: pm0=2026-09-11 | Date field: pm0=2026-09-11
+2026-09-14 14:29:32,744 - INFO -  - ID: 652403 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: nan | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-14 14:29:32,747 - INFO -  - ID: 652404 | Procedure: Questionário GAD-7 | Appointment date: nan | Check field: gad7_0=N/A | Date field: gad7_0=N/A
+2026-09-14 14:29:32,750 - INFO -  - ID: 652405 | Procedure: Questionário PHQ9 | Appointment date: nan | Check field: phq9_0=N/A | Date field: phq9_0=N/A
+2026-09-14 14:29:32,752 - INFO -  - ID: 652406 | Procedure: Questionário WPAI | Appointment date: nan | Check field: wpai0=N/A | Date field: wpai0=N/A
+2026-09-14 14:29:32,753 - INFO -  - ID: 652407 | Procedure: Questionário Short Form - SF-36 | Appointment date: nan | Check field: sf36_0=N/A | Date field: sf36_0=N/A
+2026-09-14 14:29:32,754 - INFO - DEBUG: Procedure mapping summary:
+2026-09-14 14:29:32,755 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-14 14:29:32,756 - INFO -  2. Matched with REDCap mapping: 9
+2026-09-14 14:29:32,760 - INFO -  3. Unmatched procedures: 0
+2026-09-14 14:29:32,766 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Identifica[cçCÇ][aãAÃ]o\s+da\s+Paciente
+2026-09-14 14:29:32,782 - INFO - No procedures to sync for pattern: Consulta\s+M[eéEÉ]dica
+2026-09-14 14:29:33,000 - INFO - ✅ Synced procedure 'Módulo Saúde' (ID: 652400) with date: 2026-09-14
+2026-09-14 14:29:33,005 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Menopausa
+2026-09-14 14:29:33,010 - INFO - No date found in REDCap for procedure Questionário da Saúde da Mulher - WHQ	 (check_field=whq0, date_field=whq0). Skipping sync.
+2026-09-14 14:29:33,015 - INFO - No date found in REDCap for procedure Questionário Short Form - SF-36 (check_field=sf36_0, date_field=sf36_0). Skipping sync.
+2026-09-14 14:29:33,018 - INFO - No date found in REDCap for procedure Questionário PHQ9 (check_field=phq9_0, date_field=phq9_0). Skipping sync.
+2026-09-14 14:29:33,023 - INFO - No date found in REDCap for procedure Questionário WPAI (check_field=wpai0, date_field=wpai0). Skipping sync.
+2026-09-14 14:29:33,029 - INFO - No date found in REDCap for procedure Questionário GAD-7 (check_field=gad7_0, date_field=gad7_0). Skipping sync.
+2026-09-14 14:29:33,030 - INFO - Unique visit procedures synchronization completed. Total procedures synced: 1/9
+2026-09-14 14:29:33,031 - INFO - Executor name from REDCap: Eduardo Augusto Rabelo Socca
+2026-09-14 14:29:33,612 - INFO - Executor 'Eduardo Augusto Rabelo Socca' (ID: 2761) is already linked to procedure ID: 652399. No action needed.
+2026-09-14 14:29:33,613 - INFO - Unique visit synchronization completed for record_id=240-4, event_name=visita_unica_arm_1
+2026-09-14 14:29:33,614 - INFO - Successfully dispatched event: record_id=240-4, event_name=visita_unica_arm_1, repeat_instance=None
+2026-09-14 14:32:29,800 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_do_participante, record=240-4, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-14 14:32:29,804 - INFO - Dispatch runtime: pid=977515, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_do_participante'
+2026-09-14 14:32:29,807 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-14 14:32:30,588 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-14 14:32:30,590 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-14 14:32:30,591 - INFO - Debug redcap status: 200
+2026-09-14 14:32:30,593 - INFO - Debug redcap response (first 30 chars): [{"record":"240-4","redcap_eve
+2026-09-14 14:32:30,597 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=['', '1']
+2026-09-14 14:32:30,599 - INFO - REDCap: exported record 240-4 for event visita_unica_arm_1, repeat_instance=None, with 232 fields from 264 entries
+2026-09-14 14:32:30,601 - INFO - Mapped gender:  ➡ None
+2026-09-14 14:32:30,602 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-14 14:32:30,604 - INFO - Volunteer payload prepared: {'nome': '240-4', 'iniciais': 'Luana Batista Fernandes', 'data_nascimento': '2026-05-31', 'sexo': None, 'email': '', 'data_inclusao': '1972-09-05', 'centro': '47', 'contatos': '11111111111'}
+2026-09-14 14:32:30,878 - INFO - Volunteer 240-4 already exists in PoloTrial with ID: 3342
+2026-09-14 14:32:30,891 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-14 14:32:31,373 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-14 14:32:31,607 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-14 14:32:31,611 - INFO - Arm matched: Embrace with ID: 283
+2026-09-14 14:32:32,177 - INFO - Participant found in PoloTrial with ID: 3317
+2026-09-14 14:32:56,144 - INFO - Participant visits retrieved: 1, for participant ID: 3317
+2026-09-14 14:32:56,145 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-14 14:32:56,146 - INFO - Participant visit found: Visita única with ID: 40711
+2026-09-14 14:32:56,330 - INFO - Unique visit already up to date (id=40711).
+2026-09-14 14:32:56,580 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-14 14:32:56,583 - INFO -  - ID: 652399 | Procedure: Consulta Médica | Appointment date: 2026-09-14T00:00:00.000Z | Check field: cm_atendimento_dt=2026-09-14 | Date field: cm_atendimento_dt=2026-09-14
+2026-09-14 14:32:56,585 - INFO -  - ID: 652400 | Procedure: Módulo Saúde | Appointment date: 2026-09-14T00:00:00.000Z | Check field: s0=2026-09-14 | Date field: s0=2026-09-14
+2026-09-14 14:32:56,592 - INFO -  - ID: 652401 | Procedure: Módulo Identificação da Paciente | Appointment date: 2026-09-11T00:00:00.000Z | Check field: idp3=240-4 | Date field: idp4=1972-09-05
+2026-09-14 14:32:56,594 - INFO -  - ID: 652402 | Procedure: Módulo Menopausa | Appointment date: 2026-09-11T00:00:00.000Z | Check field: pm0=2026-09-11 | Date field: pm0=2026-09-11
+2026-09-14 14:32:56,596 - INFO -  - ID: 652403 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: nan | Check field: whq0=N/A | Date field: whq0=N/A
+2026-09-14 14:32:56,597 - INFO -  - ID: 652404 | Procedure: Questionário GAD-7 | Appointment date: nan | Check field: gad7_0=2026-09-14 | Date field: gad7_0=2026-09-14
+2026-09-14 14:32:56,599 - INFO -  - ID: 652405 | Procedure: Questionário PHQ9 | Appointment date: nan | Check field: phq9_0=2026-09-14 | Date field: phq9_0=2026-09-14
+2026-09-14 14:32:56,600 - INFO -  - ID: 652406 | Procedure: Questionário WPAI | Appointment date: nan | Check field: wpai0=2026-09-14 | Date field: wpai0=2026-09-14
+2026-09-14 14:32:56,605 - INFO -  - ID: 652407 | Procedure: Questionário Short Form - SF-36 | Appointment date: nan | Check field: sf36_0=2026-09-14 | Date field: sf36_0=2026-09-14
+2026-09-14 14:32:56,607 - INFO - DEBUG: Procedure mapping summary:
+2026-09-14 14:32:56,608 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-14 14:32:56,608 - INFO -  2. Matched with REDCap mapping: 9
+2026-09-14 14:32:56,609 - INFO -  3. Unmatched procedures: 0
+2026-09-14 14:32:56,614 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Identifica[cçCÇ][aãAÃ]o\s+da\s+Paciente
+2026-09-14 14:32:56,619 - INFO - No procedures to sync for pattern: Consulta\s+M[eéEÉ]dica
+2026-09-14 14:32:56,658 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Sa[uúUÚ]de
+2026-09-14 14:32:56,662 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Menopausa
+2026-09-14 14:32:56,675 - INFO - No date found in REDCap for procedure Questionário da Saúde da Mulher - WHQ	 (check_field=whq0, date_field=whq0). Skipping sync.
+2026-09-14 14:32:56,885 - INFO - ✅ Synced procedure 'Questionário Short Form - SF-36' (ID: 652407) with date: 2026-09-14
+2026-09-14 14:32:57,121 - INFO - ✅ Synced procedure 'Questionário PHQ9' (ID: 652405) with date: 2026-09-14
+2026-09-14 14:32:57,313 - INFO - ✅ Synced procedure 'Questionário WPAI' (ID: 652406) with date: 2026-09-14
+2026-09-14 14:32:57,500 - INFO - ✅ Synced procedure 'Questionário GAD-7' (ID: 652404) with date: 2026-09-14
+2026-09-14 14:32:57,501 - INFO - Unique visit procedures synchronization completed. Total procedures synced: 4/9
+2026-09-14 14:32:57,501 - INFO - Executor name from REDCap: Eduardo Augusto Rabelo Socca
+2026-09-14 14:32:57,945 - INFO - Executor 'Eduardo Augusto Rabelo Socca' (ID: 2761) is already linked to procedure ID: 652399. No action needed.
+2026-09-14 14:32:57,946 - INFO - Unique visit synchronization completed for record_id=240-4, event_name=visita_unica_arm_1
+2026-09-14 14:32:57,949 - INFO - Successfully dispatched event: record_id=240-4, event_name=visita_unica_arm_1, repeat_instance=None
+2026-09-14 14:34:09,104 - INFO - Received webhook from REDCap DET: project_id=68, username=eduardosoccasvri, instrument=modulo_whq_questionario_da_saude_da_mulher, record=240-4, redcap_event_name=visita_unica_arm_1, redcap_data_acess_group=, redcap_repeat_instance=None, redcap_repeat_instrument=None, redcap_url=https://svriglobal.org/redcap/, project_url=https://svriglobal.org/redcap/redcap_v17.3.10/index.php?pid=68
+2026-09-14 14:34:09,110 - INFO - Dispatch runtime: pid=977515, module=/mnt/c/Users/Science/Documents/Python/integracao_embrace/src/integracao_embrace/dispatch.py, event_name='visita_unica_arm_1', instrument='modulo_whq_questionario_da_saude_da_mulher'
+2026-09-14 14:34:09,111 - INFO - Dispatching to unique visit handles: visita_unica_arm_1
+2026-09-14 14:34:09,812 - INFO - Debug redcap url: https://svriglobal.org/redcap/api/
+2026-09-14 14:34:09,813 - INFO - Debug redcaptoken (First 3 chars): E6B...
+2026-09-14 14:34:09,814 - INFO - Debug redcap status: 200
+2026-09-14 14:34:09,819 - INFO - Debug redcap response (first 30 chars): [{"record":"240-4","redcap_eve
+2026-09-14 14:34:09,822 - INFO - REDCap: filtering event=visita_unica_arm_1 by repeat_instance=None; response instances=['', '1']
+2026-09-14 14:34:09,826 - INFO - REDCap: exported record 240-4 for event visita_unica_arm_1, repeat_instance=None, with 270 fields from 302 entries
+2026-09-14 14:34:09,829 - INFO - Mapped gender:  ➡ None
+2026-09-14 14:34:09,833 - INFO - Mapped site: SVRI Clínica Morumbi ➡ 47
+2026-09-14 14:34:09,836 - INFO - Volunteer payload prepared: {'nome': '240-4', 'iniciais': 'Luana Batista Fernandes', 'data_nascimento': '2026-05-31', 'sexo': None, 'email': '', 'data_inclusao': '1972-09-05', 'centro': '47', 'contatos': '11111111111'}
+2026-09-14 14:34:10,053 - INFO - Volunteer 240-4 already exists in PoloTrial with ID: 3342
+2026-09-14 14:34:10,099 - INFO - DEBUG: Searching protocol Embrace for site 47
+2026-09-14 14:34:10,562 - INFO - Protocol found: Embrace with ID: 2381 (site=47)
+2026-09-14 14:34:10,872 - INFO - DEBUG: Protocol Arm founded for the unique visit: ['Embrace']
+2026-09-14 14:34:10,890 - INFO - Arm matched: Embrace with ID: 283
+2026-09-14 14:34:11,532 - INFO - Participant found in PoloTrial with ID: 3317
+2026-09-14 14:34:35,460 - INFO - Participant visits retrieved: 1, for participant ID: 3317
+2026-09-14 14:34:35,468 - INFO - Looking for unique visit with name: Visita única among: ['Visita única']
+2026-09-14 14:34:35,473 - INFO - Participant visit found: Visita única with ID: 40711
+2026-09-14 14:34:35,674 - INFO - Unique visit already up to date (id=40711).
+2026-09-14 14:34:35,904 - INFO - DEBUG: Available procedures in PoloTrial for unique visit: ['Consulta Médica', 'Módulo Saúde', 'Módulo Identificação da Paciente', 'Módulo Menopausa', 'Questionário da Saúde da Mulher - WHQ\t', 'Questionário GAD-7', 'Questionário PHQ9', 'Questionário WPAI', 'Questionário Short Form - SF-36']
+2026-09-14 14:34:35,906 - INFO -  - ID: 652399 | Procedure: Consulta Médica | Appointment date: 2026-09-14T00:00:00.000Z | Check field: cm_atendimento_dt=2026-09-14 | Date field: cm_atendimento_dt=2026-09-14
+2026-09-14 14:34:35,907 - INFO -  - ID: 652400 | Procedure: Módulo Saúde | Appointment date: 2026-09-14T00:00:00.000Z | Check field: s0=2026-09-14 | Date field: s0=2026-09-14
+2026-09-14 14:34:35,908 - INFO -  - ID: 652401 | Procedure: Módulo Identificação da Paciente | Appointment date: 2026-09-11T00:00:00.000Z | Check field: idp3=240-4 | Date field: idp4=1972-09-05
+2026-09-14 14:34:35,909 - INFO -  - ID: 652402 | Procedure: Módulo Menopausa | Appointment date: 2026-09-11T00:00:00.000Z | Check field: pm0=2026-09-11 | Date field: pm0=2026-09-11
+2026-09-14 14:34:35,910 - INFO -  - ID: 652403 | Procedure: Questionário da Saúde da Mulher - WHQ	 | Appointment date: nan | Check field: whq0=2026-09-14 | Date field: whq0=2026-09-14
+2026-09-14 14:34:35,911 - INFO -  - ID: 652404 | Procedure: Questionário GAD-7 | Appointment date: 2026-09-14T00:00:00.000Z | Check field: gad7_0=2026-09-14 | Date field: gad7_0=2026-09-14
+2026-09-14 14:34:35,912 - INFO -  - ID: 652405 | Procedure: Questionário PHQ9 | Appointment date: 2026-09-14T00:00:00.000Z | Check field: phq9_0=2026-09-14 | Date field: phq9_0=2026-09-14
+2026-09-14 14:34:35,913 - INFO -  - ID: 652406 | Procedure: Questionário WPAI | Appointment date: 2026-09-14T00:00:00.000Z | Check field: wpai0=2026-09-14 | Date field: wpai0=2026-09-14
+2026-09-14 14:34:35,914 - INFO -  - ID: 652407 | Procedure: Questionário Short Form - SF-36 | Appointment date: 2026-09-14T00:00:00.000Z | Check field: sf36_0=2026-09-14 | Date field: sf36_0=2026-09-14
+2026-09-14 14:34:35,914 - INFO - DEBUG: Procedure mapping summary:
+2026-09-14 14:34:35,915 - INFO -  1. Total procedures in PoloTrial for unique visit: 9
+2026-09-14 14:34:35,916 - INFO -  2. Matched with REDCap mapping: 9
+2026-09-14 14:34:35,917 - INFO -  3. Unmatched procedures: 0
+2026-09-14 14:34:35,920 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Identifica[cçCÇ][aãAÃ]o\s+da\s+Paciente
+2026-09-14 14:34:35,922 - INFO - No procedures to sync for pattern: Consulta\s+M[eéEÉ]dica
+2026-09-14 14:34:35,925 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Sa[uúUÚ]de
+2026-09-14 14:34:35,927 - INFO - No procedures to sync for pattern: M[oóOÓ]dulo\s+Menopausa
+2026-09-14 14:34:36,128 - INFO - ✅ Synced procedure 'Questionário da Saúde da Mulher - WHQ	' (ID: 652403) with date: 2026-09-14
+2026-09-14 14:34:36,131 - INFO - No procedures to sync for pattern: Question[aáAÁ]rio\s+Short\s+Form\s-\s+SF-36
+2026-09-14 14:34:36,135 - INFO - No procedures to sync for pattern: Question[aáAÁ]rio\s+PHQ9
+2026-09-14 14:34:36,138 - INFO - No procedures to sync for pattern: Question[aáAÁ]rio\s+WPAI
+2026-09-14 14:34:36,141 - INFO - No procedures to sync for pattern: Question[aáAÁ]rio\s+GAD-7
+2026-09-14 14:34:36,142 - INFO - Unique visit procedures synchronization completed. Total procedures synced: 1/9
+2026-09-14 14:34:36,143 - INFO - Executor name from REDCap: Eduardo Augusto Rabelo Socca
+2026-09-14 14:34:36,592 - INFO - Executor 'Eduardo Augusto Rabelo Socca' (ID: 2761) is already linked to procedure ID: 652399. No action needed.
+2026-09-14 14:34:36,593 - INFO - Unique visit synchronization completed for record_id=240-4, event_name=visita_unica_arm_1
+2026-09-14 14:34:36,595 - INFO - Successfully dispatched event: record_id=240-4, event_name=visita_unica_arm_1, repeat_instance=None

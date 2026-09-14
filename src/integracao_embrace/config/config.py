@@ -25,5 +25,5 @@ PARTICIPANT_STATUS = "status_participante"
 # 5. Instrumento (formulário) do REDCap que contém o status do participante,
 # usado dentro do evento da visita única para o dispatch decidir o handler.
 # TODO: confirmar o nome exato do instrumento no REDCap (unique_name do formulário).
-PARTICIPANT_STATUS_INSTRUMENT = "status_participante"
+PARTICIPANT_STATUS_INSTRUMENT = "status_do_participante"
 
