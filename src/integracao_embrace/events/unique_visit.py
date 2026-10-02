@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Any, Dict, Optional
 from integracao_embrace.polotrial_client import PoloTrialClient
 from integracao_embrace.redcap_client import RedcapClient
-from integracao_embrace.utils import get_date_from_redcap
+from integracao_embrace.utils import get_date_from_redcap, get_initials_from_name
 from integracao_embrace.mappings.procedures_maps import POLOTRIAL_UNIQUE_EVENT_PROCEDURES_MAP
 from integracao_embrace.mappings.site_code_maps import SITE_CODE_MAPPING
 from integracao_embrace.mappings.gender_maps import GENDER_MAPPING
@@ -106,7 +106,7 @@ def sync_unique_event(
     
     volunteer_payload = {
         "nome": rc("NOME", record_id),
-        "iniciais": rc("INICIAIS"),
+        "iniciais": get_initials_from_name(rc("INICIAIS")),
         'data_nascimento': rc("DATA_NASCIMENTO"),
         'sexo': gender_code,
         'email': rc("EMAIL"),
@@ -189,8 +189,11 @@ def sync_unique_event(
             "co_voluntario": co_voluntario,
             "co_protocolo": co_protocolo,
             "data_inclusao": rc("DATA_INCLUSAO"),
+            "data_randomizacao": rc("DATA_INCLUSAO"),
+            "data_fim_tratamento": rc("DATA_INCLUSAO"),
             "id_participante": rc("PARTICIPANT_ID", record_id),
             "numero_de_screening": rc("NOME", record_id),
+            "numero_de_randomizacao": rc("NOME", record_id),
             "status_participante": "540",
             "co_braco": co_braco,
             "atualizar_agenda": "1",

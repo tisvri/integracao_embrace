@@ -5,6 +5,18 @@ from integracao_embrace.redcap_client import RedcapClient
 
 logger = logging.getLogger(__name__)
 
+def get_initials_from_name(full_name: str) -> str:
+    """Extract initials from a full name.
+
+    Args:
+        full_name (str): The full name (e.g., "Luana Batista Fernandes").
+
+    Returns:
+        str: The initials in uppercase (e.g., "LBF"), or "" if full_name is empty.
+    """
+    tokens = full_name.strip().split()
+    return "".join(token[0].upper() for token in tokens if token)
+
 def get_date_from_redcap(
     redcap_payload: Dict[str, Any],
     check_field: str,
